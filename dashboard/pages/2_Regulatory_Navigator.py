@@ -143,14 +143,14 @@ def render_pathway_details():
         col1, col2 = st.columns(2)
 
         with col1:
-            st.markdown("**✅ Advantages:**")
+            st.markdown("**Advantages:**")
             for adv in pathway.get('advantages', []):
-                st.success(adv, icon="✓")
+                st.success(adv)
 
         with col2:
-            st.markdown("**⚠️ Limitations:**")
+            st.markdown("**Limitations:**")
             for lim in pathway.get('limitations', []):
-                st.warning(lim, icon="⚠")
+                st.warning(lim)
 
         # BCI Examples
         examples = pathway.get('bci_examples', []) or pathway.get('bci_designations', [])
