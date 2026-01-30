@@ -1,0 +1,30 @@
+# Core
+praw>=7.7.0
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Tier 1: Sentiment Analysis
+vaderSentiment>=3.3.2
+
+# Tier 2: Statistical Analysis
+scipy>=1.11.0
+numpy>=1.24.0
+
+# Tier 3: AI/ML Integration
+anthropic>=0.18.0
+spacy>=3.7.0
+
+# Tier 4: Multi-Source Data
+biopython>=1.81
+requests>=2.31.0
+
+# Tier 5: Dashboard & API
+streamlit>=1.31.0
+fastapi>=0.109.0
+uvicorn>=0.27.0
+plotly>=5.18.0
+pandas>=2.1.0
+
+# Export & Utilities
+python-dotenv>=1.0.0
+fpdf2>=2.7.0
