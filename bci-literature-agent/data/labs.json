@@ -1,0 +1,452 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2026-01-30",
+    "description": "Database of leading BCI/neural interface research labs worldwide",
+    "curated_for": "Blackrock Neurotech / Neuralace competitive intelligence"
+  },
+  "labs": [
+    {
+      "id": "stanford-nptl",
+      "name": "Neural Prosthetics Translational Lab (NPTL)",
+      "institution": "Stanford University",
+      "location": "Stanford, CA, USA",
+      "website": "https://nptl.stanford.edu/",
+      "principal_investigators": ["Jaimie Henderson", "Krishna Shenoy (deceased 2023)"],
+      "focus_areas": [
+        "Motor BCIs",
+        "Speech restoration",
+        "Neural decoding algorithms",
+        "Intracortical neural prostheses"
+      ],
+      "key_achievements": [
+        "BrainGate clinical trials",
+        "High-performance speech neuroprosthesis (Nature 2023)",
+        "Mental handwriting to text BCI"
+      ],
+      "collaboration_potential": "HIGH",
+      "neuralace_relevance": ["Speech BCIs", "Neural decoding", "Clinical translation"],
+      "funding_sources": ["NIH", "DARPA", "Howard Hughes Medical Institute"]
+    },
+    {
+      "id": "caltech-chen-center",
+      "name": "T&C Chen Brain-Machine Interface Center",
+      "institution": "California Institute of Technology",
+      "location": "Pasadena, CA, USA",
+      "website": "https://www.vis.caltech.edu/Chen_Center",
+      "principal_investigators": ["Richard Andersen"],
+      "focus_areas": [
+        "Cognitive neural prosthetics",
+        "Posterior parietal cortex BCIs",
+        "Movement intention decoding",
+        "Tetraplegic patient studies"
+      ],
+      "key_achievements": [
+        "First demonstration of cognitive signals for BCI control",
+        "Posterior parietal cortex implants for paralysis"
+      ],
+      "collaboration_potential": "HIGH",
+      "neuralace_relevance": ["High-channel recording", "Cognitive BCIs", "Clinical research"],
+      "funding_sources": ["T&C Chen Foundation", "NIH", "DARPA"]
+    },
+    {
+      "id": "brown-braingate",
+      "name": "BrainGate Research Team",
+      "institution": "Brown University / Carney Institute",
+      "location": "Providence, RI, USA",
+      "website": "https://www.braingate.org/",
+      "principal_investigators": ["Leigh Hochberg", "John Donoghue"],
+      "focus_areas": [
+        "Intracortical BCIs for paralysis",
+        "Motor restoration",
+        "Speech neuroprosthetics",
+        "Clinical BCI trials"
+      ],
+      "key_achievements": [
+        "First FDA-approved intracortical BCI trial",
+        "ALS patient speech restoration (97% accuracy)",
+        "Long-term implant stability studies"
+      ],
+      "collaboration_potential": "CRITICAL",
+      "neuralace_relevance": ["Clinical translation", "FDA pathways", "Blackrock array users"],
+      "notes": "Primary users of Blackrock NeuroPort arrays - direct collaboration opportunity",
+      "funding_sources": ["NIH", "VA", "DARPA"]
+    },
+    {
+      "id": "berkeley-maharbiz",
+      "name": "Maharbiz Lab / Neural Dust",
+      "institution": "UC Berkeley",
+      "location": "Berkeley, CA, USA",
+      "website": "https://bsac.berkeley.edu/",
+      "principal_investigators": ["Michel Maharbiz", "Jose Carmena"],
+      "focus_areas": [
+        "Neural dust - ultrasonic wireless interfaces",
+        "Minimally invasive BCIs",
+        "Ultrasound power delivery",
+        "Peripheral nerve interfaces"
+      ],
+      "key_achievements": [
+        "Neural dust concept and demonstration (Neuron 2016)",
+        "Wireless ultrasound-powered implants",
+        "StimDust peripheral nerve stimulator"
+      ],
+      "collaboration_potential": "HIGH",
+      "neuralace_relevance": ["Wireless technology", "Minimally invasive approaches", "Novel power delivery"],
+      "funding_sources": ["DARPA", "NIH", "Berkeley Sensor & Actuator Center"]
+    },
+    {
+      "id": "harvard-lieber",
+      "name": "Lieber Group (Mesh Electronics)",
+      "institution": "Harvard University",
+      "location": "Cambridge, MA, USA",
+      "website": "https://cml.harvard.edu/",
+      "principal_investigators": ["Charles Lieber"],
+      "focus_areas": [
+        "Syringe-injectable mesh electronics",
+        "Flexible neural probes",
+        "Seamless brain integration",
+        "Chronic biocompatibility"
+      ],
+      "key_achievements": [
+        "Injectable mesh electronics (PNAS 2017)",
+        "Minimal chronic immune response demonstration",
+        "Neuron-scale flexible probes"
+      ],
+      "collaboration_potential": "MEDIUM",
+      "neuralace_relevance": ["Flexible substrates", "Biocompatibility solutions", "Mesh electrode designs"],
+      "notes": "Pioneered ultra-flexible injectable electrodes - directly relevant to Neuralace design philosophy",
+      "funding_sources": ["NIH", "NSF", "DOD"]
+    },
+    {
+      "id": "ucsd-bhang",
+      "name": "Bhang Lab - Neural Engineering",
+      "institution": "UC San Diego",
+      "location": "San Diego, CA, USA",
+      "principal_investigators": ["Shadi Dayeh"],
+      "focus_areas": [
+        "High-density micro-ECoG arrays",
+        "Thin-film neural interfaces",
+        "Minimally invasive implantation",
+        "Neural decoding"
+      ],
+      "key_achievements": [
+        "1,024-channel thin-film microelectrode array (Nature Biomedical Engineering 2025)",
+        "Cranial micro-slit implantation technique",
+        "Scalable cortical mapping"
+      ],
+      "collaboration_potential": "CRITICAL",
+      "neuralace_relevance": ["High-channel arrays", "Thin-film technology", "Minimally invasive surgery"],
+      "funding_sources": ["NIH", "DARPA", "NSF"]
+    },
+    {
+      "id": "pittsburgh-schwartz",
+      "name": "Schwartz Lab - Motor Physiology",
+      "institution": "University of Pittsburgh",
+      "location": "Pittsburgh, PA, USA",
+      "principal_investigators": ["Andrew Schwartz"],
+      "focus_areas": [
+        "Motor cortex physiology",
+        "Prosthetic arm control",
+        "Neural population dynamics",
+        "Real-time BCI control"
+      ],
+      "key_achievements": [
+        "Seven-degree-of-freedom prosthetic arm control",
+        "Bidirectional BCI with sensory feedback"
+      ],
+      "collaboration_potential": "HIGH",
+      "neuralace_relevance": ["Motor BCIs", "Prosthetic control", "Sensory feedback"],
+      "funding_sources": ["NIH", "DARPA"]
+    },
+    {
+      "id": "mit-boyden",
+      "name": "Synthetic Neurobiology Group",
+      "institution": "MIT Media Lab / McGovern Institute",
+      "location": "Cambridge, MA, USA",
+      "website": "https://syntheticneurobiology.org/",
+      "principal_investigators": ["Ed Boyden"],
+      "focus_areas": [
+        "Optogenetics",
+        "Expansion microscopy",
+        "Neural circuit mapping",
+        "Novel neural interface technologies"
+      ],
+      "key_achievements": [
+        "Optogenetics development",
+        "Expansion microscopy invention",
+        "3D neural recording approaches"
+      ],
+      "collaboration_potential": "MEDIUM",
+      "neuralace_relevance": ["Optogenetic integration", "High-resolution neural interfaces"],
+      "funding_sources": ["NIH", "DARPA", "McGovern Institute"]
+    },
+    {
+      "id": "ucsf-chang",
+      "name": "Chang Lab - Speech & Language",
+      "institution": "UC San Francisco",
+      "location": "San Francisco, CA, USA",
+      "principal_investigators": ["Edward Chang"],
+      "focus_areas": [
+        "Speech neuroprosthetics",
+        "High-density ECoG",
+        "Language neural circuits",
+        "Clinical BCI trials"
+      ],
+      "key_achievements": [
+        "First speech-to-text BCI from attempted speech",
+        "Avatar face control via BCI",
+        "High-density cortical mapping"
+      ],
+      "collaboration_potential": "HIGH",
+      "neuralace_relevance": ["Speech restoration", "High-density recording", "Clinical translation"],
+      "funding_sources": ["NIH", "Howard Hughes Medical Institute"]
+    },
+    {
+      "id": "ucsf-starr",
+      "name": "Starr Lab - Movement Disorders",
+      "institution": "UC San Francisco",
+      "location": "San Francisco, CA, USA",
+      "principal_investigators": ["Philip Starr"],
+      "focus_areas": [
+        "Deep brain stimulation",
+        "Closed-loop neuromodulation",
+        "Depression treatment via DBS",
+        "Parkinson's disease"
+      ],
+      "key_achievements": [
+        "Personalized closed-loop DBS for depression",
+        "Real-time symptom tracking algorithms"
+      ],
+      "collaboration_potential": "HIGH",
+      "neuralace_relevance": ["Depression/anxiety treatment", "Closed-loop systems", "Mental health BCIs"],
+      "notes": "Leading depression DBS research - directly relevant to Neuralace mental health applications",
+      "funding_sources": ["NIH", "DARPA", "Weill Institute"]
+    },
+    {
+      "id": "janelia-hhmi",
+      "name": "Janelia Research Campus",
+      "institution": "Howard Hughes Medical Institute",
+      "location": "Ashburn, VA, USA",
+      "website": "https://www.janelia.org/",
+      "principal_investigators": ["Tim Harris (Neuropixels)", "Karel Svoboda"],
+      "focus_areas": [
+        "Neuropixels probe development",
+        "Large-scale neural recording",
+        "Neural circuit dissection",
+        "Tool development"
+      ],
+      "key_achievements": [
+        "Neuropixels 1.0 and 2.0 development",
+        "Neuropixels Ultra (high-density)",
+        "Recording from 1000+ neurons simultaneously"
+      ],
+      "collaboration_potential": "HIGH",
+      "neuralace_relevance": ["High-density probes", "Manufacturing insights", "Neural recording standards"],
+      "funding_sources": ["Howard Hughes Medical Institute", "Wellcome Trust"]
+    },
+    {
+      "id": "ucl-neuropixels",
+      "name": "UCL Neuropixels Team",
+      "institution": "University College London",
+      "location": "London, UK",
+      "principal_investigators": ["Nick Steinmetz", "Matteo Carandini"],
+      "focus_areas": [
+        "Neuropixels chronic implants",
+        "Visual cortex recording",
+        "Decision-making circuits"
+      ],
+      "key_achievements": [
+        "Chronic Neuropixels implantation methods",
+        "Large-scale population recordings"
+      ],
+      "collaboration_potential": "MEDIUM",
+      "neuralace_relevance": ["Chronic recording stability", "Visual cortex research"],
+      "funding_sources": ["Wellcome Trust", "Gatsby Foundation"]
+    },
+    {
+      "id": "epfl-courtine",
+      "name": "Courtine Lab - NeuroRestore",
+      "institution": "EPFL / CHUV",
+      "location": "Lausanne, Switzerland",
+      "website": "https://www.neurorestore.swiss/",
+      "principal_investigators": ["Grégoire Courtine", "Jocelyne Bloch"],
+      "focus_areas": [
+        "Spinal cord injury recovery",
+        "Epidural electrical stimulation",
+        "Walking restoration",
+        "Brain-spine interfaces"
+      ],
+      "key_achievements": [
+        "Paralyzed patients walking again (Nature 2022)",
+        "Digital bridge from brain to spine",
+        "STIMO clinical trials"
+      ],
+      "collaboration_potential": "HIGH",
+      "neuralace_relevance": ["Motor restoration", "High-channel stimulation", "Clinical translation"],
+      "funding_sources": ["Swiss National Science Foundation", "EU Horizon", "Wyss Center"]
+    },
+    {
+      "id": "ucla-visual-prosthesis",
+      "name": "Visual Prosthesis Lab",
+      "institution": "UCLA",
+      "location": "Los Angeles, CA, USA",
+      "principal_investigators": ["Nader Pouratian"],
+      "focus_areas": [
+        "Cortical visual prostheses",
+        "Orion device clinical trials",
+        "Phosphene mapping",
+        "Blindness restoration"
+      ],
+      "key_achievements": [
+        "Orion visual cortical prosthesis trial",
+        "5-year feasibility study completion"
+      ],
+      "collaboration_potential": "CRITICAL",
+      "neuralace_relevance": ["Visual prosthesis", "High-channel cortical stimulation", "Clinical pathways"],
+      "notes": "Direct competitor/collaborator space for Blackrock visual prosthesis 2028 goal",
+      "funding_sources": ["NIH", "Second Sight/Cortigent"]
+    },
+    {
+      "id": "georgia-tech-bhatti",
+      "name": "Neural Interface Systems Lab",
+      "institution": "Georgia Tech",
+      "location": "Atlanta, GA, USA",
+      "principal_investigators": ["Muhannad Bakir", "Omer Inan"],
+      "focus_areas": [
+        "CMOS neural interfaces",
+        "High-density electrode packaging",
+        "Wireless neural telemetry"
+      ],
+      "collaboration_potential": "MEDIUM",
+      "neuralace_relevance": ["CMOS integration", "Packaging solutions"],
+      "funding_sources": ["NSF", "NIH", "DARPA"]
+    },
+    {
+      "id": "columbia-bhatti",
+      "name": "Bhatti Neural Interface Lab",
+      "institution": "Columbia University",
+      "location": "New York, NY, USA",
+      "principal_investigators": ["Ken Bhatti", "Dion Khodagholy"],
+      "focus_areas": [
+        "Conformable neural interfaces",
+        "Organic electronics for BCIs",
+        "PEDOT:PSS electrodes"
+      ],
+      "key_achievements": [
+        "NeuroGrid - high-density organic electrodes",
+        "Long-term stable organic neural interfaces"
+      ],
+      "collaboration_potential": "HIGH",
+      "neuralace_relevance": ["Conformable substrates", "Organic electrode materials", "Biocompatibility"],
+      "funding_sources": ["NIH", "NSF", "DARPA"]
+    },
+    {
+      "id": "mount-sinai-kopell",
+      "name": "Center for Neuromodulation",
+      "institution": "Mount Sinai Health System",
+      "location": "New York, NY, USA",
+      "principal_investigators": ["Brian Kopell"],
+      "focus_areas": [
+        "Deep brain stimulation",
+        "Treatment-resistant depression",
+        "OCD neuromodulation",
+        "Closed-loop DBS"
+      ],
+      "key_achievements": [
+        "First TRANSCEND study implant (Abbott DBS for depression)",
+        "Pioneering psychiatric DBS"
+      ],
+      "collaboration_potential": "HIGH",
+      "neuralace_relevance": ["Depression treatment", "Mental health BCIs", "Clinical translation"],
+      "notes": "Leading Abbott's TRANSCEND trial - key insights for Neuralace mental health applications",
+      "funding_sources": ["Abbott", "NIH", "NIMH"]
+    },
+    {
+      "id": "rice-robinson",
+      "name": "Robinson Lab - Neuroengineering",
+      "institution": "Rice University",
+      "location": "Houston, TX, USA",
+      "principal_investigators": ["Jacob Robinson"],
+      "focus_areas": [
+        "Minimally invasive neural interfaces",
+        "Magnetic neural stimulation",
+        "Genetically targeted recording"
+      ],
+      "key_achievements": [
+        "Magnetogenetics development",
+        "MOANA wireless brain interface"
+      ],
+      "collaboration_potential": "MEDIUM",
+      "neuralace_relevance": ["Wireless interfaces", "Minimally invasive approaches"],
+      "funding_sources": ["DARPA", "NIH", "NSF"]
+    }
+  ],
+  "companies": [
+    {
+      "id": "neuralink",
+      "name": "Neuralink",
+      "location": "Fremont, CA, USA",
+      "type": "Commercial",
+      "focus_areas": ["High-channel implants", "Robotic surgery", "Wireless BCIs"],
+      "key_products": ["N1 Link implant (1024 channels)"],
+      "clinical_status": "FDA IDE approved, 21 human implants by Jan 2026",
+      "competitive_position": "Direct competitor - high channel count focus",
+      "funding": "$500M+ (private)"
+    },
+    {
+      "id": "synchron",
+      "name": "Synchron",
+      "location": "Brooklyn, NY, USA",
+      "type": "Commercial",
+      "focus_areas": ["Endovascular BCI", "Minimally invasive implants"],
+      "key_products": ["Stentrode (16 channels, endovascular)"],
+      "clinical_status": "COMMAND trial positive results 2024, heading to pivotal",
+      "competitive_position": "Complementary - minimally invasive approach",
+      "funding": "$145M+"
+    },
+    {
+      "id": "paradromics",
+      "name": "Paradromics",
+      "location": "Austin, TX, USA",
+      "type": "Commercial",
+      "focus_areas": ["High-bandwidth neural data", "Speech restoration"],
+      "key_products": ["Connexus Direct Data Interface (1600+ channels)"],
+      "clinical_status": "FDA IDE approved Nov 2025",
+      "competitive_position": "Direct competitor - high channel count",
+      "funding": "$85M+"
+    },
+    {
+      "id": "precision-neuroscience",
+      "name": "Precision Neuroscience",
+      "location": "New York, NY, USA",
+      "type": "Commercial",
+      "focus_areas": ["Thin-film cortical arrays", "Minimally invasive"],
+      "key_products": ["Layer 7 Cortical Interface (1024+ channels)"],
+      "clinical_status": "Early human trials",
+      "competitive_position": "Direct competitor - similar thin-film approach",
+      "funding": "$100M+"
+    },
+    {
+      "id": "inner-cosmos",
+      "name": "Inner Cosmos",
+      "location": "San Francisco, CA, USA",
+      "type": "Commercial",
+      "focus_areas": ["Depression treatment", "Digital pill"],
+      "key_products": ["Digital pill for depression (external stimulation)"],
+      "clinical_status": "FDA IDE approved 2022",
+      "competitive_position": "Mental health focus - less invasive approach",
+      "funding": "$30M+"
+    },
+    {
+      "id": "cortigent",
+      "name": "Cortigent (formerly Second Sight)",
+      "location": "Los Angeles, CA, USA",
+      "type": "Commercial",
+      "focus_areas": ["Visual cortical prosthesis", "Blindness restoration"],
+      "key_products": ["Orion Visual Cortical Prosthesis (60 electrodes)"],
+      "clinical_status": "5-year feasibility study complete, FDA Breakthrough Device",
+      "competitive_position": "Key competitor for Blackrock visual prosthesis 2028",
+      "funding": "Acquired by Vivani Medical"
+    }
+  ]
+}

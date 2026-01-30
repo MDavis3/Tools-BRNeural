@@ -1,0 +1,192 @@
+{
+  "high_channel_count_landscape": {
+    "description": "Comparison of high-channel-count neural interface technologies (1000+ electrodes)",
+    "competitors": [
+      {
+        "company": "Blackrock Neurotech",
+        "device": "Neuralace",
+        "channels": 10000,
+        "form_factor": "Ultra-thin flexible lace chip",
+        "substrate": "Brain-conforming flexible material",
+        "status": "Research tool 2024; Clinical 2028",
+        "target_applications": ["Vision restoration", "Mental health", "Memory"],
+        "regulatory_status": "Preclinical; RUO distribution planned",
+        "key_differentiators": [
+          "Highest channel count in clinical development",
+          "Porous structure for improved biocompatibility",
+          "Flexible form factor conforms to brain surface",
+          "Backed by 20+ years of NeuroPort safety data"
+        ],
+        "challenges": [
+          "Manufacturing complexity at scale",
+          "Long timeline to clinical approval",
+          "Novel pathway for visual prosthesis"
+        ]
+      },
+      {
+        "company": "Imec",
+        "device": "Neuropixels 2.0",
+        "channels": 10000,
+        "form_factor": "Silicon probe shank",
+        "substrate": "Rigid silicon",
+        "status": "Research tool available",
+        "target_applications": ["Neuroscience research"],
+        "regulatory_status": "Research Use Only; No clinical pathway",
+        "key_differentiators": [
+          "State-of-the-art research tool",
+          "Funded by HHMI, Wellcome Trust, Allen Institute",
+          "Strong academic adoption"
+        ],
+        "challenges": [
+          "No clinical development plans",
+          "Rigid form factor limits applications",
+          "Research-only positioning"
+        ],
+        "clinical_relevance": "Not pursuing clinical pathway - research tool only"
+      },
+      {
+        "company": "Neuralink",
+        "device": "N1 Implant",
+        "channels": 1024,
+        "form_factor": "Coin-sized implant with thread electrodes",
+        "substrate": "Flexible polymer threads",
+        "status": "IDE clinical trial (PRIME Study)",
+        "target_applications": ["Motor control", "Communication"],
+        "regulatory_status": "IDE approved; PRIME study ongoing",
+        "clinical_trial": {
+          "name": "PRIME Study",
+          "nct": "NCT06429735",
+          "patients": 5,
+          "status": "Enrolling"
+        },
+        "key_differentiators": [
+          "Surgical robot for implantation",
+          "Fully wireless",
+          "Strong brand recognition",
+          "Consumer-facing vision"
+        ],
+        "challenges": [
+          "10x fewer channels than Neuralace",
+          "Early electrode retraction issues reported",
+          "Not targeting vision/mental health"
+        ]
+      },
+      {
+        "company": "Paradromics",
+        "device": "Connexus BCI",
+        "channels": 1600,
+        "form_factor": "Dime-sized with microwire array",
+        "substrate": "Microwire electrodes",
+        "status": "IDE approved; Clinical trial 2026",
+        "target_applications": ["Speech restoration"],
+        "regulatory_status": "IDE approved November 2025",
+        "clinical_trial": {
+          "name": "Connect-One Study",
+          "target_start": "Q1 2026",
+          "indication": "Speech restoration"
+        },
+        "key_differentiators": [
+          "Highest bandwidth demonstrated (>200 bps)",
+          "Lowest latency (56ms)",
+          "Speech focus differentiates from Neuralink"
+        ],
+        "challenges": [
+          "6x fewer channels than Neuralace",
+          "Focused on single application",
+          "Smaller company with limited resources"
+        ]
+      },
+      {
+        "company": "Precision Neuroscience",
+        "device": "Layer 7-T",
+        "channels": 1024,
+        "form_factor": "Ultra-thin film array",
+        "substrate": "Polyimide thin-film",
+        "status": "510(k) CLEARED",
+        "target_applications": ["Cortical recording (temporary)"],
+        "regulatory_status": "510(k) cleared March 2025",
+        "clearance": {
+          "k_number": "K242618",
+          "date": "2025-03-30",
+          "limitation": "Temporary (<30 day) use only"
+        },
+        "key_differentiators": [
+          "First high-channel BCI with 510(k) clearance",
+          "Fast regulatory pathway execution",
+          "Subdural (less invasive than penetrating)"
+        ],
+        "challenges": [
+          "Limited to temporary use",
+          "Cannot claim permanent implant or closed-loop",
+          "10x fewer channels than Neuralace"
+        ]
+      },
+      {
+        "company": "Cortigent",
+        "device": "Orion",
+        "channels": 60,
+        "form_factor": "Surface electrode array",
+        "substrate": "Standard materials",
+        "status": "Early Feasibility Study",
+        "target_applications": ["Cortical visual prosthesis"],
+        "regulatory_status": "IDE Early Feasibility",
+        "clinical_trial": {
+          "name": "Early Feasibility Study",
+          "nct": "NCT03344848",
+          "patients": 6,
+          "status": "Ongoing"
+        },
+        "key_differentiators": [
+          "Only cortical visual prosthesis in human trials",
+          "Legacy from Second Sight (Argus II)",
+          "Established regulatory pathway"
+        ],
+        "challenges": [
+          "Very low channel count (60 vs 10,000)",
+          "Limited resolution for vision",
+          "Company financial challenges"
+        ],
+        "relevance_to_neuralace": "Direct competitor for visual prosthesis indication"
+      }
+    ]
+  },
+  "channel_count_comparison": {
+    "by_channel_count": [
+      {"company": "Blackrock (Neuralace)", "channels": 10000, "status": "Development"},
+      {"company": "Imec (Neuropixels 2.0)", "channels": 10000, "status": "Research only"},
+      {"company": "Paradromics (Connexus)", "channels": 1600, "status": "IDE approved"},
+      {"company": "Neuralink (N1)", "channels": 1024, "status": "IDE trial"},
+      {"company": "Precision (Layer 7)", "channels": 1024, "status": "510(k) cleared"},
+      {"company": "Blackrock (NeuroPort)", "channels": 96, "status": "510(k) cleared"},
+      {"company": "Cortigent (Orion)", "channels": 60, "status": "IDE trial"}
+    ]
+  },
+  "neuralace_competitive_position": {
+    "strengths": [
+      "Highest clinical channel count (10,000+)",
+      "Flexible, brain-conforming form factor",
+      "Porous structure for improved biocompatibility",
+      "20+ years of safety data from NeuroPort platform",
+      "Multiple application targets (vision, mental health)",
+      "Strong IP position (patent pending)"
+    ],
+    "weaknesses": [
+      "Longer timeline to market than competitors",
+      "No human data yet",
+      "Manufacturing scale-up challenges",
+      "No established regulatory pathway for visual prosthesis"
+    ],
+    "opportunities": [
+      "First-mover in high-channel clinical visual prosthesis",
+      "Unmet need in treatment-resistant depression",
+      "TCET pathway for expedited Medicare coverage",
+      "Research tool revenue during development"
+    ],
+    "threats": [
+      "Neuralink brand recognition and funding",
+      "Orion/Cortigent ahead in visual prosthesis pathway",
+      "DBS depression trial failures may deter investors",
+      "Competitive research tool landscape (Neuropixels)"
+    ]
+  }
+}

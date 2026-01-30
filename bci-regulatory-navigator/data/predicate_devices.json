@@ -1,0 +1,129 @@
+{
+  "predicate_devices": [
+    {
+      "k_number": "K191186",
+      "device_name": "Subdural Electrodes",
+      "manufacturer": "Ad-Tech Medical Instrument Corp.",
+      "clearance_date": "2020-01",
+      "regulation_number": "21 CFR 882.1310",
+      "regulation_name": "Cortical Electrode",
+      "product_code": "GYC",
+      "device_class": "II",
+      "intended_use": "Temporary implantation (<30 days) on cortical surface for recording, monitoring, and stimulation of electrical signals on the surface of the brain",
+      "clinical_applications": [
+        "Localization of epileptogenic foci",
+        "Functional brain mapping",
+        "Pre-surgical planning"
+      ],
+      "technical_characteristics": {
+        "substrate": "Silicone elastomer",
+        "contacts": "Platinum/iridium",
+        "geometries": ["strip", "grid", "dual-sided", "inter-hemispheric"]
+      },
+      "predicate_used_for": ["K242618"]
+    },
+    {
+      "k_number": "K192764",
+      "device_name": "Evo Cortical Electrode",
+      "manufacturer": "NeuroOne Medical Technologies",
+      "clearance_date": "2020",
+      "regulation_number": "21 CFR 882.1310",
+      "regulation_name": "Cortical Electrode",
+      "product_code": "GYC",
+      "device_class": "II",
+      "intended_use": "Temporary cortical recording and stimulation",
+      "technical_characteristics": {
+        "substrate": "Polyimide thin-film",
+        "feature": "Higher channel density than traditional grids"
+      },
+      "predicate_used_for": ["K242618"]
+    },
+    {
+      "k_number": "K110010",
+      "device_name": "NeuroPort Cortical Microelectrode Array System",
+      "manufacturer": "Blackrock Microsystems (now Blackrock Neurotech)",
+      "clearance_date": "2011",
+      "original_clearance": "K070272 (2007-08)",
+      "regulation_number": "21 CFR 882.1310",
+      "regulation_name": "Cortical Electrode",
+      "product_code": "GYC",
+      "device_class": "II",
+      "intended_use": "Temporary (<30 day) cortical recording and neural activity monitoring",
+      "technical_characteristics": {
+        "substrate": "Silicon",
+        "electrode_count": 96,
+        "tip_material": ["Platinum", "Iridium oxide"],
+        "type": "Intracortical penetrating electrodes"
+      },
+      "significance": "Gold standard for intracortical BCI research; only FDA-cleared intracortical array for human IDE studies",
+      "predicate_used_for": []
+    },
+    {
+      "k_number": "K242618",
+      "device_name": "Layer 7-T Cortical Interface",
+      "manufacturer": "Precision Neuroscience",
+      "clearance_date": "2025-03-30",
+      "regulation_number": "21 CFR 882.1310",
+      "regulation_name": "Cortical Electrode",
+      "product_code": "GYC",
+      "device_class": "II",
+      "intended_use": "Temporary (<30 day) use for recording, monitoring and stimulation of electrical signals on the surface of the brain via open or burr-hole procedures",
+      "technical_characteristics": {
+        "substrate": "Polyimide thin-film",
+        "electrode_count": 1024,
+        "feature": "Ultra-thin, high-density array"
+      },
+      "predicates_used": {
+        "primary": "K191186 (Ad-Tech Subdural Electrodes)",
+        "reference": "K192764 (NeuroOne Evo)"
+      },
+      "significance": "First high-channel-count BCI electrode cleared via 510(k)"
+    },
+    {
+      "k_number": "K151354",
+      "device_name": "INTEGRA Cortical Electrode",
+      "manufacturer": "INTEGRA",
+      "clearance_date": "2015-12",
+      "regulation_number": "21 CFR 882.1310",
+      "regulation_name": "Cortical Electrode",
+      "product_code": "GYC",
+      "device_class": "II",
+      "intended_use": "Temporary cortical recording and stimulation",
+      "predicate_used_for": []
+    }
+  ],
+  "product_codes": [
+    {
+      "code": "GYC",
+      "name": "Cortical Electrode",
+      "regulation": "21 CFR 882.1310",
+      "device_class": "II",
+      "definition": "An electrode which is temporarily placed on the surface of the brain for stimulating the brain or recording the brain's electrical activity",
+      "review_panel": "Neurology"
+    },
+    {
+      "code": "GYE",
+      "name": "Depth Electrode",
+      "regulation": "21 CFR 882.1320",
+      "device_class": "II",
+      "definition": "An electrode used for temporary stimulation of, or recording electrical signals at, subsurface levels of the brain",
+      "review_panel": "Neurology"
+    },
+    {
+      "code": "GWF",
+      "name": "Electroencephalograph",
+      "regulation": "21 CFR 882.1400",
+      "device_class": "II",
+      "definition": "A device used to measure and record the electrical activity of the brain",
+      "review_panel": "Neurology"
+    },
+    {
+      "code": "PHL",
+      "name": "Implanted Brain Stimulator for Pain",
+      "device_class": "III",
+      "definition": "Implanted neurostimulator for chronic pain",
+      "review_panel": "Neurology",
+      "pathway": "PMA"
+    }
+  ]
+}

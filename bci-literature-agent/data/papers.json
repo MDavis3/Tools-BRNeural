@@ -1,0 +1,515 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2026-01-30",
+    "description": "Curated database of breakthrough BCI/neural interface papers (2022-2026)",
+    "focus_areas": [
+      "High-channel-count arrays",
+      "Flexible/conformable interfaces",
+      "Visual prostheses",
+      "Mental health neuromodulation",
+      "Biocompatibility"
+    ],
+    "curated_for": "Blackrock Neurotech / Neuralace intelligence"
+  },
+  "papers": [
+    {
+      "id": "nature-biomed-eng-2025-thin-film",
+      "title": "Minimally invasive implantation of scalable high-density cortical microelectrode arrays for multimodal neural decoding and stimulation",
+      "authors": ["Shadi Dayeh et al."],
+      "journal": "Nature Biomedical Engineering",
+      "year": 2025,
+      "doi": "10.1038/s41551-025-01501-w",
+      "url": "https://www.nature.com/articles/s41551-025-01501-w",
+      "abstract_summary": "Demonstrates a 1,024-channel thin-film microelectrode array with minimally invasive 'cranial micro-slit' implantation technique avoiding craniotomy. Achieved in porcine models and human cadavers with <20 min surgical time.",
+      "key_findings": [
+        "1,024-channel conformable thin-film array",
+        "Cranial micro-slit implantation (no craniotomy needed)",
+        "50μm recording electrodes, 380μm stimulation electrodes",
+        "400μm inter-electrode pitch",
+        ">91% manufacturing yield",
+        "Sub-20 minute implantation procedure"
+      ],
+      "neuralace_relevance": "CRITICAL",
+      "relevance_notes": "Directly comparable technology to Neuralace - validates high-channel thin-film approach and minimally invasive delivery",
+      "categories": ["high-channel", "thin-film", "minimally-invasive", "clinical-translation"],
+      "citation_count": "New publication"
+    },
+    {
+      "id": "science-neuropixels-2-0",
+      "title": "Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings",
+      "authors": ["Nick Steinmetz", "Marius Pachitariu", "Tim Harris", "et al."],
+      "journal": "Science",
+      "year": 2021,
+      "doi": "10.1126/science.abf4588",
+      "url": "https://www.science.org/doi/10.1126/science.abf4588",
+      "abstract_summary": "Introduces Neuropixels 2.0 with 5,120 recording sites on a single shank, enabling stable recordings from the same neurons for weeks to months in freely behaving animals.",
+      "key_findings": [
+        "5,120 recording sites per shank",
+        "Miniaturized probe design",
+        "Stable long-term recordings (weeks-months)",
+        "Same-neuron tracking algorithms",
+        "Multiple brain regions simultaneously"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Gold standard for high-density recording - benchmarking target for Neuralace channel density and stability",
+      "categories": ["high-channel", "silicon-probe", "chronic-recording"],
+      "citation_count": 1500
+    },
+    {
+      "id": "neuron-2025-neuropixels-ultra",
+      "title": "Ultra-high-density Neuropixels probes improve detection and identification in neuronal recordings",
+      "authors": ["Tim Harris et al."],
+      "journal": "Neuron",
+      "year": 2025,
+      "doi": "TBD",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0896627325006658",
+      "abstract_summary": "Neuropixels Ultra achieves much smaller and denser recording sites than previous designs, improving single-neuron detection and spike sorting accuracy.",
+      "key_findings": [
+        "Ultra-high-density electrode sites",
+        "Improved single-neuron detection",
+        "Better spike sorting accuracy",
+        "Reduced spatial averaging"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Latest evolution of high-density probes - technology direction indicator",
+      "categories": ["high-channel", "silicon-probe"],
+      "citation_count": "New publication"
+    },
+    {
+      "id": "nature-2023-speech-bci",
+      "title": "A high-performance speech neuroprosthesis",
+      "authors": ["Frank Willett", "Krishna Shenoy", "Jaimie Henderson", "et al."],
+      "journal": "Nature",
+      "year": 2023,
+      "doi": "10.1038/s41586-023-06377-x",
+      "url": "https://www.nature.com/articles/s41586-023-06377-x",
+      "abstract_summary": "Demonstrates a speech BCI decoding attempted speech at 62 words per minute with 9.1% error rate in a patient with ALS, approaching natural conversation speeds.",
+      "key_findings": [
+        "62 words per minute decoding speed",
+        "9.1% word error rate",
+        "125,000 word vocabulary",
+        "Recurrent neural network decoder",
+        "Works from attempted (not overt) speech"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Breakthrough for speech restoration - potential Neuralace application",
+      "categories": ["speech-bci", "clinical-trial", "neural-decoding"],
+      "citation_count": 450
+    },
+    {
+      "id": "nejm-2024-als-speech",
+      "title": "An accurate and rapidly calibrating speech neuroprosthesis",
+      "authors": ["BrainGate Consortium"],
+      "journal": "New England Journal of Medicine",
+      "year": 2024,
+      "doi": "TBD",
+      "url": "https://www.brown.edu/news/2024-08-14/bci-speak-again",
+      "abstract_summary": "ALS patient regained nearly fluent speech using BCI that translates brain signals with up to 97% accuracy. Device transforms brain activity into text displayed on screen.",
+      "key_findings": [
+        "97% decoding accuracy",
+        "ALS patient communication restoration",
+        "Real-time speech-to-text",
+        "Rapid calibration protocol"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Clinical milestone for communication BCIs - demonstrates market potential",
+      "categories": ["speech-bci", "clinical-trial", "als"],
+      "citation_count": 100
+    },
+    {
+      "id": "frontiers-2024-flexible-hdmea",
+      "title": "Flexible high-density microelectrode arrays for closed-loop brain–machine interfaces: a review",
+      "authors": ["Various"],
+      "journal": "Frontiers in Neuroscience",
+      "year": 2024,
+      "doi": "10.3389/fnins.2024.1348434",
+      "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2024.1348434/full",
+      "abstract_summary": "Comprehensive review of flexible high-density MEAs for closed-loop BMIs, covering materials (polyimide, parylene, PDMS), fabrication techniques, and design strategies.",
+      "key_findings": [
+        "High density defined as <200μm pitch",
+        "Polyimide and parylene as preferred substrates",
+        "PEDOT:PSS for electrode coating",
+        "Strategies for chronic biocompatibility",
+        "Importance of mechanical compliance"
+      ],
+      "neuralace_relevance": "CRITICAL",
+      "relevance_notes": "Direct technology review for Neuralace - covers flexible substrate materials and designs",
+      "categories": ["flexible-electrodes", "review", "materials"],
+      "citation_count": 50
+    },
+    {
+      "id": "biosens-bioelec-2025-flexible-arrays",
+      "title": "Advances in flexible high-density microelectrode arrays for brain-computer interfaces",
+      "authors": ["Various"],
+      "journal": "Biosensors and Bioelectronics",
+      "year": 2025,
+      "doi": "10.1016/j.bios.2025.XXX",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0956566325009790",
+      "abstract_summary": "Reviews clinical applications of flexible HD-MEAs including sensory enhancement, human-machine interfaces, and neurological disease treatment.",
+      "key_findings": [
+        "Clinical translation pathways",
+        "Sensory enhancement applications",
+        "Neurological disease treatments"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Latest review on clinical applications - market validation",
+      "categories": ["flexible-electrodes", "clinical-translation", "review"],
+      "citation_count": "New publication"
+    },
+    {
+      "id": "neuron-2016-neural-dust",
+      "title": "Wireless Recording in the Peripheral Nervous System with Ultrasonic Neural Dust",
+      "authors": ["Dongjin Seo", "Ryan Neely", "Michel Maharbiz", "Jose Carmena", "et al."],
+      "journal": "Neuron",
+      "year": 2016,
+      "doi": "10.1016/j.neuron.2016.06.034",
+      "url": "https://www.cell.com/neuron/fulltext/S0896-6273(16)30344-0",
+      "abstract_summary": "Demonstrates ultrasound-powered wireless neural recording using mm-scale 'neural dust' motes implanted in peripheral nerves of rats.",
+      "key_findings": [
+        "Ultrasound power delivery",
+        "Batteryless implants",
+        "Wireless backscatter communication",
+        "Peripheral nerve recording demonstrated"
+      ],
+      "neuralace_relevance": "MEDIUM",
+      "relevance_notes": "Neuralace press release mentions 'neural dust' concept - this is the foundational paper",
+      "categories": ["wireless", "neural-dust", "minimally-invasive"],
+      "citation_count": 800
+    },
+    {
+      "id": "pnas-2017-mesh-electronics",
+      "title": "Syringe-injectable mesh electronics integrate seamlessly with minimal chronic immune response in the brain",
+      "authors": ["Tao Zhou", "Guosong Hong", "Charles Lieber", "et al."],
+      "journal": "PNAS",
+      "year": 2017,
+      "doi": "10.1073/pnas.1705509114",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1705509114",
+      "abstract_summary": "Demonstrates that ultra-flexible mesh electronics can be injected into brain tissue and integrate seamlessly without chronic inflammation or scarring.",
+      "key_findings": [
+        "Syringe-injectable deployment",
+        "Minimal chronic immune response",
+        "No gliosis or scarring",
+        "Stable long-term integration"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Foundational work for flexible, biocompatible neural interfaces - directly relevant to Neuralace 'lace' design",
+      "categories": ["flexible-electrodes", "biocompatibility", "mesh-electronics"],
+      "citation_count": 600
+    },
+    {
+      "id": "biomat-2023-biomimetic-coating",
+      "title": "Nanotopography-enhanced biomimetic coating maintains bioactivity after weeks of dry storage and improves chronic neural recording",
+      "authors": ["K. Woeppel", "et al."],
+      "journal": "Biomaterials",
+      "year": 2023,
+      "doi": "10.1016/j.biomaterials.2023.122326",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "abstract_summary": "Demonstrates nanotopography and bioactive modifications that create seamless neural tissue interface for chronic implants.",
+      "key_findings": [
+        "Nanotopography-enhanced coatings",
+        "Maintained bioactivity after dry storage",
+        "Improved chronic recording quality",
+        "Reduced immune response"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Directly applicable coating technology for Neuralace biocompatibility",
+      "categories": ["biocompatibility", "coatings", "chronic-recording"],
+      "citation_count": 30
+    },
+    {
+      "id": "bioeng-review-2025-biocompatibility",
+      "title": "Revolutionizing brain‒computer interfaces: overcoming biocompatibility challenges in implantable neural interfaces",
+      "authors": ["Various"],
+      "journal": "Journal of Nanobiotechnology",
+      "year": 2025,
+      "doi": "10.1186/s12951-025-03573-7",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12243264/",
+      "abstract_summary": "Comprehensive review of biocompatibility challenges in implantable BCIs, covering coating materials, design strategies, and failure modes.",
+      "key_findings": [
+        "Primary limitation is mechanical mismatch",
+        "Scar tissue reduces performance",
+        "Coating strategies reviewed",
+        "Future directions proposed"
+      ],
+      "neuralace_relevance": "CRITICAL",
+      "relevance_notes": "Essential reference for Neuralace biocompatibility engineering",
+      "categories": ["biocompatibility", "review", "coatings"],
+      "citation_count": "New publication"
+    },
+    {
+      "id": "cell-2025-inner-speech",
+      "title": "Inner speech in motor cortex and implications for speech neuroprostheses",
+      "authors": ["Stanford NPTL"],
+      "journal": "Cell",
+      "year": 2025,
+      "doi": "10.1016/j.cell.2025.06.015",
+      "url": "https://www.cell.com/cell/fulltext/S0092-8674(25)00681-6",
+      "abstract_summary": "Demonstrates detection of inner speech from motor cortex, enabling BCI communication from thought alone without attempted vocalization.",
+      "key_findings": [
+        "Inner speech detection possible",
+        "Motor cortex encodes internal speech",
+        "Implications for speech prosthetics"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Next-generation speech BCI capability - potential Neuralace feature",
+      "categories": ["speech-bci", "neural-decoding"],
+      "citation_count": "New publication"
+    },
+    {
+      "id": "neuron-2025-dbs-depression",
+      "title": "Optimized deep brain stimulation for anterior cingulate cortex inhibition produces antidepressant-like effects in mice",
+      "authors": ["Various"],
+      "journal": "Neuron",
+      "year": 2025,
+      "doi": "TBD",
+      "url": "https://www.cell.com/neuron/abstract/S0896-6273(25)00525-2",
+      "abstract_summary": "Shows that inhibitory DBS produces rapid, long-lasting antidepressant effects by suppressing mood-regulating networks.",
+      "key_findings": [
+        "Anterior cingulate cortex target",
+        "Inhibitory (not excitatory) DBS",
+        "Rapid antidepressant effects",
+        "Long-lasting benefits"
+      ],
+      "neuralace_relevance": "CRITICAL",
+      "relevance_notes": "Key research for Neuralace depression treatment - identifies optimal stimulation parameters and targets",
+      "categories": ["depression", "deep-brain-stimulation", "mental-health"],
+      "citation_count": "New publication"
+    },
+    {
+      "id": "mdpi-2025-dbs-psychiatric",
+      "title": "Deep Brain Stimulation in Treatment-Resistant Psychiatric Disorders: Efficacy, Safety, and Future Directions",
+      "authors": ["Various"],
+      "journal": "Brain Sciences (MDPI)",
+      "year": 2025,
+      "doi": "10.3390/brainsci15111244",
+      "url": "https://www.mdpi.com/2076-3425/15/11/1244",
+      "abstract_summary": "Reviews DBS applications in treatment-resistant psychiatric disorders including depression, OCD, and anxiety.",
+      "key_findings": [
+        "DBS effective for treatment-resistant depression",
+        "Multiple brain targets identified",
+        "Safety profile established",
+        "Future closed-loop approaches"
+      ],
+      "neuralace_relevance": "CRITICAL",
+      "relevance_notes": "Comprehensive review of psychiatric DBS - essential for Neuralace mental health roadmap",
+      "categories": ["depression", "anxiety", "deep-brain-stimulation", "review"],
+      "citation_count": "New publication"
+    },
+    {
+      "id": "pmc-2022-visual-prosthesis-review",
+      "title": "A narrative review of cortical visual prosthesis systems: the latest progress and significance of nanotechnology for the future",
+      "authors": ["Various"],
+      "journal": "Annals of Translational Medicine",
+      "year": 2022,
+      "doi": "10.21037/atm-22-2858",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9279795/",
+      "abstract_summary": "Reviews cortical visual prosthesis systems including Orion, focusing on nanotechnology advances for future development.",
+      "key_findings": [
+        "Orion clinical trial results",
+        "Phosphene perception patterns",
+        "Nanotechnology opportunities",
+        "Higher electrode count needed"
+      ],
+      "neuralace_relevance": "CRITICAL",
+      "relevance_notes": "Essential reference for Blackrock's 2028 visual prosthesis goal",
+      "categories": ["visual-prosthesis", "review", "clinical-trial"],
+      "citation_count": 50
+    },
+    {
+      "id": "pmc-2024-bionic-eye-review",
+      "title": "Can bionic eyes restore vision? Breakthroughs, challenges, and future frontiers in ophthalmology",
+      "authors": ["Various"],
+      "journal": "PMC",
+      "year": 2024,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12659496/",
+      "abstract_summary": "Comprehensive review of bionic eye technologies including retinal and cortical approaches.",
+      "key_findings": [
+        "Alpha-IMS face recognition achieved",
+        "Cortical prostheses bypass damaged retina",
+        "Higher resolution needed for useful vision"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Vision restoration technology landscape - competitive intelligence",
+      "categories": ["visual-prosthesis", "review"],
+      "citation_count": "New publication"
+    },
+    {
+      "id": "nature-2022-paralysis-walking",
+      "title": "Walking naturally after spinal cord injury using a brain-spine interface",
+      "authors": ["Grégoire Courtine", "Jocelyne Bloch", "et al."],
+      "journal": "Nature",
+      "year": 2022,
+      "doi": "10.1038/s41586-022-04954-8",
+      "url": "https://www.nature.com/",
+      "abstract_summary": "Demonstrates a brain-spine interface that enabled a paralyzed patient to walk naturally by bridging the lesion with neural signals.",
+      "key_findings": [
+        "Wireless brain-spine interface",
+        "Natural walking restored",
+        "Chronic spinal cord injury patient",
+        "Real-time neural decoding"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Demonstrates potential of high-channel BCIs for motor restoration",
+      "categories": ["motor-restoration", "clinical-trial", "spinal-cord"],
+      "citation_count": 300
+    },
+    {
+      "id": "brainx-2024-hdmea-chips",
+      "title": "High-density implantable neural electrodes and chips for massive neural recordings",
+      "authors": ["Wang et al."],
+      "journal": "Brain-X",
+      "year": 2024,
+      "doi": "10.1002/brx2.65",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/brx2.65",
+      "abstract_summary": "Reviews design techniques for area-efficient, energy-efficient BCI readout chips from few channels to massive 10,000+ channel designs.",
+      "key_findings": [
+        "Trajectory from few to 10,000+ channels",
+        "Area-efficient design techniques",
+        "Energy-efficient architectures",
+        "CMOS integration strategies"
+      ],
+      "neuralace_relevance": "CRITICAL",
+      "relevance_notes": "Directly addresses Neuralace's 10,000+ channel integration challenge",
+      "categories": ["high-channel", "cmos", "integrated-circuits"],
+      "citation_count": 20
+    },
+    {
+      "id": "sciencedaily-2025-bisc",
+      "title": "Brain-Integrated Silicon Chip (BISC): Ultra-thin neural implant with tens of thousands of electrodes",
+      "authors": ["Columbia/Stanford - Kampto Neurotech"],
+      "journal": "Science Daily",
+      "year": 2025,
+      "url": "https://www.sciencedaily.com/releases/2025/12/251209234139.htm",
+      "abstract_summary": "BISC is an ultra-thin neural implant creating high-bandwidth wireless link between brain and computers, with tens of thousands of electrodes and on-chip AI.",
+      "key_findings": [
+        "Tens of thousands of electrodes",
+        "Ultra-thin single-chip design",
+        "High-bandwidth wireless",
+        "On-chip AI processing"
+      ],
+      "neuralace_relevance": "CRITICAL",
+      "relevance_notes": "Direct competitor technology announcement - comparable to Neuralace specs",
+      "categories": ["high-channel", "wireless", "ai-integration"],
+      "citation_count": "New publication"
+    },
+    {
+      "id": "nature-npg-2025-biocompat-design",
+      "title": "Material and design strategies for chronically-implantable neural probes",
+      "authors": ["Various"],
+      "journal": "NPG Asia Materials",
+      "year": 2025,
+      "doi": "10.1038/s41427-025-00613-8",
+      "url": "https://www.nature.com/articles/s41427-025-00613-8",
+      "abstract_summary": "Reviews material and design strategies for chronic neural probe biocompatibility.",
+      "key_findings": [
+        "Biomimetic design principles",
+        "Nanozyme electrode coatings",
+        "Long-term stability strategies"
+      ],
+      "neuralace_relevance": "HIGH",
+      "relevance_notes": "Design guidance for Neuralace chronic biocompatibility",
+      "categories": ["biocompatibility", "materials", "design"],
+      "citation_count": "New publication"
+    },
+    {
+      "id": "npj-flex-2025-chronic-stability",
+      "title": "Long-term stability strategies of deep brain flexible neural interface",
+      "authors": ["Various"],
+      "journal": "npj Flexible Electronics",
+      "year": 2025,
+      "doi": "10.1038/s41528-025-00410-x",
+      "url": "https://www.nature.com/articles/s41528-025-00410-x",
+      "abstract_summary": "Reviews strategies for long-term stability of flexible deep brain interfaces, addressing chronic inflammation and electrode failure.",
+      "key_findings": [
+        "Chronic inflammation causes failure",
+        "Flexibility reduces tissue damage",
+        "Coating strategies for longevity"
+      ],
+      "neuralace_relevance": "CRITICAL",
+      "relevance_notes": "Directly addresses Neuralace's chronic implant stability challenge",
+      "categories": ["flexible-electrodes", "biocompatibility", "chronic-recording"],
+      "citation_count": "New publication"
+    }
+  ],
+  "key_journals": [
+    {
+      "name": "Nature",
+      "impact_factor": 64.8,
+      "relevance": "Breakthrough papers, highest visibility",
+      "url": "https://www.nature.com/"
+    },
+    {
+      "name": "Science",
+      "impact_factor": 56.9,
+      "relevance": "Breakthrough papers",
+      "url": "https://www.science.org/"
+    },
+    {
+      "name": "Nature Biomedical Engineering",
+      "impact_factor": 29.2,
+      "relevance": "Primary journal for BCI technology papers",
+      "url": "https://www.nature.com/natbiomedeng/"
+    },
+    {
+      "name": "Nature Neuroscience",
+      "impact_factor": 25.0,
+      "relevance": "Neuroscience breakthroughs",
+      "url": "https://www.nature.com/neuro/"
+    },
+    {
+      "name": "Neuron",
+      "impact_factor": 17.2,
+      "relevance": "Core neuroscience and neural engineering",
+      "url": "https://www.cell.com/neuron/"
+    },
+    {
+      "name": "Cell",
+      "impact_factor": 66.8,
+      "relevance": "Highest-impact findings",
+      "url": "https://www.cell.com/"
+    },
+    {
+      "name": "New England Journal of Medicine",
+      "impact_factor": 176.1,
+      "relevance": "Clinical trial results",
+      "url": "https://www.nejm.org/"
+    },
+    {
+      "name": "Journal of Neural Engineering",
+      "impact_factor": 5.0,
+      "relevance": "Specialized neural interface journal",
+      "url": "https://iopscience.iop.org/journal/1741-2552"
+    },
+    {
+      "name": "Frontiers in Neuroscience",
+      "impact_factor": 4.3,
+      "relevance": "Open access, broad coverage",
+      "url": "https://www.frontiersin.org/journals/neuroscience"
+    },
+    {
+      "name": "IEEE Transactions on Biomedical Engineering",
+      "impact_factor": 4.4,
+      "relevance": "Engineering approaches",
+      "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10"
+    },
+    {
+      "name": "Biosensors and Bioelectronics",
+      "impact_factor": 12.6,
+      "relevance": "Sensor technology",
+      "url": "https://www.sciencedirect.com/journal/biosensors-and-bioelectronics"
+    },
+    {
+      "name": "Biomaterials",
+      "impact_factor": 14.0,
+      "relevance": "Biocompatibility, materials",
+      "url": "https://www.sciencedirect.com/journal/biomaterials"
+    },
+    {
+      "name": "npj Flexible Electronics",
+      "impact_factor": 12.0,
+      "relevance": "Flexible neural interfaces",
+      "url": "https://www.nature.com/npjflexelectron/"
+    }
+  ]
+}

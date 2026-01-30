@@ -1,0 +1,206 @@
+{
+  "medicare_pathways": [
+    {
+      "id": "ncd",
+      "name": "National Coverage Determination (NCD)",
+      "description": "CMS's formal coverage decision applying nationally to all Medicare beneficiaries",
+      "typical_timeline_months": "6-12",
+      "coverage_outcomes": [
+        {
+          "type": "covered",
+          "description": "Reasonable and necessary for diagnosis/treatment"
+        },
+        {
+          "type": "non_covered",
+          "description": "Not meeting coverage criteria"
+        },
+        {
+          "type": "ced",
+          "name": "Coverage with Evidence Development",
+          "description": "Covered only in approved clinical studies"
+        }
+      ]
+    },
+    {
+      "id": "tcet",
+      "name": "Transitional Coverage for Emerging Technologies",
+      "effective_date": "2024-08-12",
+      "description": "New pathway for FDA Breakthrough Devices providing expedited national coverage",
+      "eligibility": [
+        "FDA Breakthrough Device Designation",
+        "FDA market authorization (approved/cleared)",
+        "Manufacturer opts in"
+      ],
+      "benefits": [
+        "Early evidence preview before FDA approval",
+        "Expedited NCD (target 6 months post-FDA)",
+        "Transitional coverage up to 5+ years",
+        "Evidence development during coverage"
+      ],
+      "process": [
+        {
+          "step": 1,
+          "name": "Pre-FDA Engagement",
+          "description": "Manufacturer requests TCET participation"
+        },
+        {
+          "step": 2,
+          "name": "Early Evidence Preview",
+          "description": "CMS reviews evidence before FDA decision"
+        },
+        {
+          "step": 3,
+          "name": "Coverage Pathway Discussion",
+          "description": "Best pathway determined with CMS"
+        },
+        {
+          "step": 4,
+          "name": "Post-FDA NCD Process",
+          "description": "NCD begins after FDA authorization"
+        },
+        {
+          "step": 5,
+          "name": "Proposed NCD",
+          "description": "Within 6 months of FDA authorization"
+        },
+        {
+          "step": 6,
+          "name": "Evidence Period",
+          "description": "5+ years coverage while data collected"
+        }
+      ],
+      "bci_eligible_companies": [
+        "Blackrock Neurotech (MoveAgain)",
+        "Neuralink (N1, Blindsight)",
+        "Synchron (Stentrode)",
+        "Cognixion (ONE)"
+      ]
+    },
+    {
+      "id": "lcd",
+      "name": "Local Coverage Determination",
+      "description": "Coverage decisions by Medicare Administrative Contractors for their regions",
+      "advantages": [
+        "Faster than NCDs",
+        "Can establish coverage precedent",
+        "Regional de facto national coverage possible"
+      ],
+      "disadvantages": [
+        "Geographic variation",
+        "Less binding than NCD",
+        "Can be overridden"
+      ]
+    }
+  ],
+  "benefit_categories": [
+    {
+      "id": "dme",
+      "name": "Durable Medical Equipment (DME)",
+      "regulation": "21 CFR § 414.202",
+      "criteria": [
+        "Withstand repeated use",
+        "Primarily medical purpose",
+        "Generally not useful without illness/injury",
+        "Appropriate for home use"
+      ],
+      "bci_examples": [
+        {
+          "device": "IpsiHand",
+          "company": "Neurolutions",
+          "status": "Classified as DME by CMS (Jan 2025)"
+        }
+      ]
+    },
+    {
+      "id": "prosthetic",
+      "name": "Prosthetic Devices",
+      "regulation": "SSA § 1861(s)(8)",
+      "criteria": [
+        "Replaces all or part of internal body organ",
+        "Includes replacement of organ function"
+      ],
+      "bci_relevance": "Implanted BCIs may qualify as prosthetics replacing neural communication function"
+    }
+  ],
+  "dbs_reimbursement_precedent": {
+    "description": "Deep Brain Stimulation provides precedent for implantable neural device reimbursement",
+    "covered_indications": [
+      "Parkinson's disease",
+      "Essential tremor",
+      "Dystonia",
+      "Obsessive-compulsive disorder",
+      "Epilepsy (adjunctive)"
+    ],
+    "example_cpt_codes": [
+      {
+        "code": "61867",
+        "description": "Implant cranial neurostimulator electrode array"
+      },
+      {
+        "code": "61885",
+        "description": "Insertion of cranial neurostimulator pulse generator"
+      },
+      {
+        "code": "95836",
+        "description": "Programming, initial"
+      },
+      {
+        "code": "95837",
+        "description": "Programming, subsequent"
+      }
+    ],
+    "estimated_reimbursement": {
+      "implantation_procedure": "$20,000-40,000",
+      "device_payment": "$25,000-50,000"
+    }
+  },
+  "bci_coverage_milestones": [
+    {
+      "date": "2021",
+      "event": "IpsiHand FDA De Novo classification",
+      "company": "Neurolutions"
+    },
+    {
+      "date": "2023-05",
+      "event": "Cognixion CMS DME supplier accreditation",
+      "company": "Cognixion"
+    },
+    {
+      "date": "2024-08",
+      "event": "CMS TCET pathway finalized",
+      "significance": "New coverage pathway for Breakthrough Devices"
+    },
+    {
+      "date": "2025-01",
+      "event": "IpsiHand CMS coverage decision - first BCI with dedicated reimbursement",
+      "company": "Neurolutions",
+      "details": {
+        "benefit_category": "DME",
+        "cpt_code": "Dedicated code assigned"
+      }
+    }
+  ],
+  "private_payor_considerations": {
+    "coverage_factors": [
+      "FDA approval status",
+      "Medical necessity evidence",
+      "Cost-effectiveness vs alternatives",
+      "Provider network expertise",
+      "Patient demand/advocacy"
+    ],
+    "strategies": [
+      {
+        "name": "Self-insured employer targeting",
+        "rationale": "More flexibility for innovative treatments"
+      },
+      {
+        "name": "Centers of Excellence programs",
+        "rationale": "Concentrate at high-volume centers with negotiated rates"
+      },
+      {
+        "name": "Outcomes-based contracts",
+        "rationale": "Payment tied to clinical outcomes reduces payor risk"
+      }
+    ]
+  }
+}

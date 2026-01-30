@@ -1,0 +1,234 @@
+{
+  "pathways": [
+    {
+      "id": "510k",
+      "name": "510(k) Premarket Notification",
+      "description": "Demonstrates substantial equivalence to a legally marketed predicate device",
+      "device_class": ["I", "II"],
+      "typical_timeline_days": 90,
+      "fda_fee_usd": 13000,
+      "clinical_data_required": false,
+      "requirements": [
+        "Identify predicate device(s)",
+        "Demonstrate same intended use",
+        "Demonstrate similar technological characteristics",
+        "Performance testing data",
+        "Biocompatibility testing (if patient contact)"
+      ],
+      "advantages": [
+        "Faster time to market",
+        "Lower cost than PMA",
+        "No mandatory clinical trials",
+        "Established pathway with predictable review"
+      ],
+      "limitations": [
+        "Requires existing predicate device",
+        "Cannot claim significant new indications",
+        "Limited to Class I or II devices"
+      ],
+      "bci_examples": [
+        {
+          "company": "Precision Neuroscience",
+          "device": "Layer 7-T Cortical Interface",
+          "clearance_number": "K242618",
+          "clearance_date": "2025-03-30"
+        },
+        {
+          "company": "Blackrock Neurotech",
+          "device": "NeuroPort Array",
+          "clearance_number": "K110010",
+          "clearance_date": "2011"
+        }
+      ]
+    },
+    {
+      "id": "de_novo",
+      "name": "De Novo Classification Request",
+      "description": "Pathway for novel, low-to-moderate risk devices without a predicate",
+      "device_class": ["I", "II"],
+      "typical_timeline_days": 150,
+      "fda_fee_usd": 123000,
+      "clinical_data_required": "varies",
+      "requirements": [
+        "Demonstrate device is novel (no predicate)",
+        "Demonstrate low-to-moderate risk profile",
+        "Propose device classification and controls",
+        "Performance and safety testing"
+      ],
+      "advantages": [
+        "Creates new regulatory pathway for similar devices",
+        "Avoids PMA for novel low-risk devices",
+        "Device becomes predicate for future 510(k)s"
+      ],
+      "limitations": [
+        "Longer than 510(k)",
+        "Higher FDA fee than 510(k)",
+        "May face more FDA questions"
+      ],
+      "bci_examples": [
+        {
+          "company": "Neurolutions",
+          "device": "IpsiHand",
+          "clearance_date": "2021"
+        }
+      ]
+    },
+    {
+      "id": "pma",
+      "name": "Premarket Approval (PMA)",
+      "description": "Most rigorous pathway for Class III high-risk devices",
+      "device_class": ["III"],
+      "typical_timeline_days": 180,
+      "fda_fee_usd": 400000,
+      "clinical_data_required": true,
+      "requirements": [
+        "Clinical trial data demonstrating safety and effectiveness",
+        "Complete manufacturing information",
+        "Proposed labeling",
+        "Environmental assessment"
+      ],
+      "advantages": [
+        "Clear pathway for high-risk devices",
+        "Strong regulatory protection",
+        "Comprehensive safety evaluation"
+      ],
+      "limitations": [
+        "Longest timeline (often 3-7 years total)",
+        "Most expensive pathway",
+        "Requires extensive clinical trials"
+      ],
+      "bci_examples": [
+        {
+          "company": "Medtronic",
+          "device": "DBS Activa/Percept",
+          "pma_number": "P960009"
+        }
+      ]
+    },
+    {
+      "id": "ide",
+      "name": "Investigational Device Exemption (IDE)",
+      "description": "Allows unapproved devices to be used in clinical studies",
+      "device_class": ["II", "III"],
+      "typical_timeline_days": 30,
+      "fda_fee_usd": 0,
+      "clinical_data_required": "generates data",
+      "ide_types": [
+        {
+          "type": "Significant Risk (SR)",
+          "description": "Requires FDA approval before study",
+          "fda_approval_required": true
+        },
+        {
+          "type": "Non-Significant Risk (NSR)",
+          "description": "IRB approval only",
+          "fda_approval_required": false
+        }
+      ],
+      "requirements": [
+        "IRB approval",
+        "Informed consent",
+        "Monitoring and reporting",
+        "Investigational labeling"
+      ],
+      "bci_examples": [
+        {
+          "company": "Synchron",
+          "device": "Stentrode",
+          "study": "COMMAND",
+          "nct_number": "NCT05035823",
+          "ide_approval_date": "2021-08"
+        },
+        {
+          "company": "Neuralink",
+          "device": "N1 Implant",
+          "study": "PRIME",
+          "nct_number": "NCT06429735",
+          "ide_approval_date": "2023-05"
+        },
+        {
+          "company": "Paradromics",
+          "device": "Connexus BCI",
+          "study": "Connect-One",
+          "ide_approval_date": "2025-11"
+        }
+      ]
+    },
+    {
+      "id": "breakthrough",
+      "name": "Breakthrough Device Designation",
+      "description": "Voluntary program to expedite development and review of innovative devices",
+      "device_class": ["II", "III"],
+      "typical_timeline_days": 60,
+      "fda_fee_usd": 0,
+      "clinical_data_required": false,
+      "requirements": [
+        "Breakthrough technology or no approved alternative",
+        "Addresses life-threatening or irreversibly debilitating condition",
+        "Provides more effective treatment or diagnosis"
+      ],
+      "benefits": [
+        "Priority FDA review",
+        "Early FDA interaction",
+        "Rolling submission capability",
+        "Senior management involvement",
+        "Potential TCET eligibility for Medicare"
+      ],
+      "bci_designations": [
+        {
+          "company": "Blackrock Neurotech",
+          "device": "MoveAgain",
+          "designation_date": "2021-11-16",
+          "indication": "Paralysis"
+        },
+        {
+          "company": "Synchron",
+          "device": "Stentrode",
+          "designation_date": "2020",
+          "indication": "Paralysis"
+        },
+        {
+          "company": "Neuralink",
+          "device": "N1 Implant",
+          "designation_date": "2020",
+          "indication": "Paralysis"
+        },
+        {
+          "company": "Neuralink",
+          "device": "Blindsight",
+          "designation_date": "2024-09",
+          "indication": "Vision restoration"
+        },
+        {
+          "company": "Cognixion",
+          "device": "ONE Headset",
+          "designation_date": "2023",
+          "indication": "Communication"
+        }
+      ]
+    },
+    {
+      "id": "hde",
+      "name": "Humanitarian Device Exemption (HDE)",
+      "description": "Pathway for devices treating conditions affecting ≤8,000 patients per year",
+      "device_class": ["III"],
+      "typical_timeline_days": 75,
+      "fda_fee_usd": 0,
+      "clinical_data_required": false,
+      "requirements": [
+        "HUD designation (condition affects ≤8,000/year)",
+        "Probable benefit outweighs risks",
+        "IRB approval required before use"
+      ],
+      "advantages": [
+        "Exempt from effectiveness requirements",
+        "Lower evidence threshold than PMA"
+      ],
+      "limitations": [
+        "Limited patient population",
+        "IRB approval at each institution",
+        "Profit restrictions may apply"
+      ]
+    }
+  ]
+}

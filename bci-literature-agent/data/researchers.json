@@ -1,0 +1,447 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2026-01-30",
+    "description": "Key researchers in BCI/neural interface field with collaboration potential assessment",
+    "curated_for": "Blackrock Neurotech / Neuralace strategic partnerships"
+  },
+  "researchers": [
+    {
+      "id": "leigh-hochberg",
+      "name": "Leigh Hochberg, MD, PhD",
+      "title": "Director, VA Providence Center for Neurorestoration",
+      "institutions": ["Brown University", "Massachusetts General Hospital", "VA Providence"],
+      "location": "Providence, RI / Boston, MA, USA",
+      "email_domain": "brown.edu",
+      "expertise": [
+        "Intracortical BCIs",
+        "Clinical BCI trials",
+        "Motor neuroprosthetics",
+        "ALS communication restoration"
+      ],
+      "key_contributions": [
+        "BrainGate consortium co-director",
+        "First FDA-approved intracortical BCI trial",
+        "Long-term human BCI implant studies",
+        "Speech restoration BCIs"
+      ],
+      "recent_publications": [
+        "An accurate and rapidly calibrating speech neuroprosthesis (NEJM 2024)"
+      ],
+      "collaboration_priority": "CRITICAL",
+      "collaboration_notes": "Primary clinical partner for Blackrock arrays - essential relationship for Neuralace clinical translation",
+      "h_index": 85,
+      "google_scholar": "https://scholar.google.com/citations?user=XXX"
+    },
+    {
+      "id": "jaimie-henderson",
+      "name": "Jaimie Henderson, MD",
+      "title": "Professor of Neurosurgery, Co-Director NPTL",
+      "institutions": ["Stanford University"],
+      "location": "Stanford, CA, USA",
+      "email_domain": "stanford.edu",
+      "expertise": [
+        "Neurosurgery",
+        "BCI implantation",
+        "Deep brain stimulation",
+        "Movement disorders"
+      ],
+      "key_contributions": [
+        "BrainGate surgical lead at Stanford",
+        "High-performance speech BCI",
+        "Mental handwriting BCI"
+      ],
+      "recent_publications": [
+        "A high-performance speech neuroprosthesis (Nature 2023)"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "Key neurosurgical expertise for Neuralace implantation protocols",
+      "h_index": 75
+    },
+    {
+      "id": "richard-andersen",
+      "name": "Richard Andersen, PhD",
+      "title": "Director, T&C Chen Brain-Machine Interface Center",
+      "institutions": ["Caltech"],
+      "location": "Pasadena, CA, USA",
+      "email_domain": "caltech.edu",
+      "expertise": [
+        "Cognitive neural prosthetics",
+        "Posterior parietal cortex",
+        "Movement intention decoding",
+        "Visual-motor integration"
+      ],
+      "key_contributions": [
+        "Pioneered cognitive signals for BCI",
+        "Posterior parietal cortex implants",
+        "Tetraplegic patient studies"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "Unique expertise in cognitive BCIs - potential for Neuralace advanced applications",
+      "h_index": 120
+    },
+    {
+      "id": "edward-chang",
+      "name": "Edward Chang, MD",
+      "title": "Professor of Neurosurgery, Chair",
+      "institutions": ["UC San Francisco"],
+      "location": "San Francisco, CA, USA",
+      "email_domain": "ucsf.edu",
+      "expertise": [
+        "Speech neuroprosthetics",
+        "High-density ECoG",
+        "Language neural circuits",
+        "Clinical BCI"
+      ],
+      "key_contributions": [
+        "First speech-to-text BCI from attempted speech",
+        "Avatar face control via BCI",
+        "High-density cortical mapping"
+      ],
+      "recent_publications": [
+        "A neuroprosthesis for speech decoding and avatar control (Nature 2023)"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "Leader in speech BCIs - complementary to Blackrock's communication restoration goals",
+      "h_index": 90
+    },
+    {
+      "id": "shadi-dayeh",
+      "name": "Shadi Dayeh, PhD",
+      "title": "Professor of Electrical and Computer Engineering",
+      "institutions": ["UC San Diego"],
+      "location": "San Diego, CA, USA",
+      "email_domain": "ucsd.edu",
+      "expertise": [
+        "High-density micro-ECoG",
+        "Thin-film neural interfaces",
+        "Minimally invasive implantation",
+        "Semiconductor neural devices"
+      ],
+      "key_contributions": [
+        "1,024-channel thin-film array (Nature Biomed Eng 2025)",
+        "Cranial micro-slit technique",
+        "Scalable cortical mapping"
+      ],
+      "recent_publications": [
+        "Minimally invasive implantation of scalable high-density cortical microelectrode arrays (Nature BME 2025)"
+      ],
+      "collaboration_priority": "CRITICAL",
+      "collaboration_notes": "Direct competitor/collaborator - thin-film technology highly relevant to Neuralace",
+      "h_index": 55
+    },
+    {
+      "id": "michel-maharbiz",
+      "name": "Michel Maharbiz, PhD",
+      "title": "Professor of EECS",
+      "institutions": ["UC Berkeley"],
+      "location": "Berkeley, CA, USA",
+      "email_domain": "berkeley.edu",
+      "expertise": [
+        "Neural dust",
+        "Ultrasonic power delivery",
+        "Wireless neural interfaces",
+        "MEMS"
+      ],
+      "key_contributions": [
+        "Neural dust concept and demonstration",
+        "Ultrasound-powered implants",
+        "StimDust peripheral stimulator"
+      ],
+      "recent_publications": [
+        "Wireless Recording in the Peripheral Nervous System with Ultrasonic Neural Dust (Neuron 2016)"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "Neural dust technology mentioned in Neuralace press - potential licensing or collaboration",
+      "h_index": 60
+    },
+    {
+      "id": "charles-lieber",
+      "name": "Charles Lieber, PhD",
+      "title": "Professor (Emeritus)",
+      "institutions": ["Harvard University"],
+      "location": "Cambridge, MA, USA",
+      "email_domain": "harvard.edu",
+      "expertise": [
+        "Mesh electronics",
+        "Injectable neural probes",
+        "Nanotechnology",
+        "Biocompatible neural interfaces"
+      ],
+      "key_contributions": [
+        "Syringe-injectable mesh electronics",
+        "Seamless brain integration",
+        "Minimal immune response demonstration"
+      ],
+      "recent_publications": [
+        "Syringe-injectable mesh electronics integrate seamlessly (PNAS 2017)"
+      ],
+      "collaboration_priority": "MEDIUM",
+      "collaboration_notes": "Foundational IP for flexible interfaces - licensing opportunity",
+      "h_index": 200,
+      "notes": "Legal issues in 2020 - verify current status"
+    },
+    {
+      "id": "philip-starr",
+      "name": "Philip Starr, MD, PhD",
+      "title": "Professor of Neurosurgery",
+      "institutions": ["UC San Francisco"],
+      "location": "San Francisco, CA, USA",
+      "email_domain": "ucsf.edu",
+      "expertise": [
+        "Deep brain stimulation",
+        "Closed-loop neuromodulation",
+        "Parkinson's disease",
+        "Depression DBS"
+      ],
+      "key_contributions": [
+        "Personalized closed-loop DBS",
+        "Real-time symptom tracking",
+        "Treatment-resistant depression studies"
+      ],
+      "collaboration_priority": "CRITICAL",
+      "collaboration_notes": "Key expert for Neuralace depression/anxiety applications",
+      "h_index": 85
+    },
+    {
+      "id": "brian-kopell",
+      "name": "Brian Kopell, MD",
+      "title": "Director, Center for Neuromodulation",
+      "institutions": ["Mount Sinai"],
+      "location": "New York, NY, USA",
+      "email_domain": "mountsinai.org",
+      "expertise": [
+        "Deep brain stimulation",
+        "Psychiatric neuromodulation",
+        "Treatment-resistant depression",
+        "OCD"
+      ],
+      "key_contributions": [
+        "First TRANSCEND study implant (Abbott)",
+        "Pioneering psychiatric DBS",
+        "Clinical trial leadership"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "Leading Abbott's depression DBS trial - insights for Neuralace mental health roadmap",
+      "h_index": 50
+    },
+    {
+      "id": "nick-steinmetz",
+      "name": "Nick Steinmetz, PhD",
+      "title": "Assistant Professor",
+      "institutions": ["University of Washington", "UCL"],
+      "location": "Seattle, WA, USA / London, UK",
+      "email_domain": "uw.edu",
+      "expertise": [
+        "Neuropixels development",
+        "Large-scale neural recording",
+        "Chronic implants",
+        "Visual cortex"
+      ],
+      "key_contributions": [
+        "Neuropixels 2.0 lead author",
+        "Chronic Neuropixels methods",
+        "Same-neuron tracking algorithms"
+      ],
+      "recent_publications": [
+        "Neuropixels 2.0 (Science 2021)"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "Expert in high-density chronic recording - benchmarking and validation",
+      "h_index": 45
+    },
+    {
+      "id": "tim-harris",
+      "name": "Tim Harris, PhD",
+      "title": "Senior Fellow",
+      "institutions": ["Janelia Research Campus (HHMI)"],
+      "location": "Ashburn, VA, USA",
+      "email_domain": "janelia.hhmi.org",
+      "expertise": [
+        "Neuropixels probe development",
+        "High-density silicon probes",
+        "Neural recording technology",
+        "Tool development"
+      ],
+      "key_contributions": [
+        "Neuropixels 1.0, 2.0, Ultra development",
+        "1000+ neuron simultaneous recording",
+        "Open-source neural tools"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "Neuropixels inventor - manufacturing and design insights",
+      "h_index": 80
+    },
+    {
+      "id": "gregoire-courtine",
+      "name": "Grégoire Courtine, PhD",
+      "title": "Professor, Director of NeuroRestore",
+      "institutions": ["EPFL", "CHUV"],
+      "location": "Lausanne, Switzerland",
+      "email_domain": "epfl.ch",
+      "expertise": [
+        "Spinal cord injury",
+        "Brain-spine interfaces",
+        "Epidural stimulation",
+        "Walking restoration"
+      ],
+      "key_contributions": [
+        "Paralyzed patients walking again (Nature 2022)",
+        "Digital brain-spine bridge",
+        "STIMO clinical trials"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "World leader in motor restoration - complementary to Blackrock BCI approach",
+      "h_index": 70
+    },
+    {
+      "id": "nader-pouratian",
+      "name": "Nader Pouratian, MD, PhD",
+      "title": "Professor and Chair of Neurosurgery",
+      "institutions": ["UT Southwestern", "formerly UCLA"],
+      "location": "Dallas, TX, USA",
+      "email_domain": "utsouthwestern.edu",
+      "expertise": [
+        "Visual cortical prostheses",
+        "Orion clinical trials",
+        "Blindness restoration",
+        "Neuromodulation"
+      ],
+      "key_contributions": [
+        "Orion visual prosthesis trial PI",
+        "Phosphene mapping studies",
+        "5-year feasibility study"
+      ],
+      "collaboration_priority": "CRITICAL",
+      "collaboration_notes": "Leading visual prosthesis researcher - essential for Blackrock's 2028 visual prosthesis goal",
+      "h_index": 55
+    },
+    {
+      "id": "dion-khodagholy",
+      "name": "Dion Khodagholy, PhD",
+      "title": "Associate Professor",
+      "institutions": ["Columbia University"],
+      "location": "New York, NY, USA",
+      "email_domain": "columbia.edu",
+      "expertise": [
+        "Organic electronics",
+        "Conformable neural interfaces",
+        "PEDOT:PSS electrodes",
+        "NeuroGrid"
+      ],
+      "key_contributions": [
+        "NeuroGrid high-density organic arrays",
+        "Long-term stable organic interfaces",
+        "Conformable ECoG"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "Expert in organic/conformable electrodes - material innovation for Neuralace",
+      "h_index": 50
+    },
+    {
+      "id": "xinyan-tracy-cui",
+      "name": "Xinyan Tracy Cui, PhD",
+      "title": "Professor of Bioengineering",
+      "institutions": ["University of Pittsburgh"],
+      "location": "Pittsburgh, PA, USA",
+      "email_domain": "pitt.edu",
+      "expertise": [
+        "Neural electrode coatings",
+        "Biocompatibility",
+        "PEDOT coatings",
+        "Chronic neural recording"
+      ],
+      "key_contributions": [
+        "Nanotopography-enhanced coatings",
+        "PEDOT electrode modifications",
+        "Chronic biocompatibility studies"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "Leading expert on electrode coatings - critical for Neuralace biocompatibility",
+      "h_index": 65
+    },
+    {
+      "id": "jacob-robinson",
+      "name": "Jacob Robinson, PhD",
+      "title": "Professor of ECE and Bioengineering",
+      "institutions": ["Rice University"],
+      "location": "Houston, TX, USA",
+      "email_domain": "rice.edu",
+      "expertise": [
+        "Minimally invasive neural interfaces",
+        "Magnetogenetics",
+        "Wireless BCIs",
+        "MOANA project"
+      ],
+      "key_contributions": [
+        "Magnetogenetics development",
+        "MOANA non-invasive BCI",
+        "Genetically targeted recording"
+      ],
+      "collaboration_priority": "MEDIUM",
+      "collaboration_notes": "Novel wireless approaches - potential Neuralace wireless technology",
+      "h_index": 40
+    },
+    {
+      "id": "stephanie-lacour",
+      "name": "Stéphanie Lacour, PhD",
+      "title": "Professor, Director of Neuro-X Institute",
+      "institutions": ["EPFL"],
+      "location": "Lausanne, Switzerland",
+      "email_domain": "epfl.ch",
+      "expertise": [
+        "Soft neural interfaces",
+        "E-dura",
+        "Stretchable electronics",
+        "Spinal cord interfaces"
+      ],
+      "key_contributions": [
+        "Electronic dura mater (e-dura)",
+        "Soft neural implants",
+        "Long-term biocompatible interfaces"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "Pioneer of soft/stretchable neural interfaces - relevant for Neuralace flexibility",
+      "h_index": 70
+    },
+    {
+      "id": "john-rogers",
+      "name": "John Rogers, PhD",
+      "title": "Professor, Director of Querrey Simpson Institute",
+      "institutions": ["Northwestern University"],
+      "location": "Evanston, IL, USA",
+      "email_domain": "northwestern.edu",
+      "expertise": [
+        "Flexible electronics",
+        "Bioresorbable electronics",
+        "Skin-mounted sensors",
+        "Stretchable devices"
+      ],
+      "key_contributions": [
+        "Bioresorbable neural interfaces",
+        "Epidermal electronics",
+        "Flexible sensor manufacturing"
+      ],
+      "collaboration_priority": "HIGH",
+      "collaboration_notes": "World leader in flexible/stretchable electronics - manufacturing insights for Neuralace",
+      "h_index": 250
+    }
+  ],
+  "collaboration_tiers": {
+    "CRITICAL": {
+      "description": "Essential partnerships for Neuralace success",
+      "action": "Initiate contact immediately, executive-level engagement",
+      "researchers": ["leigh-hochberg", "shadi-dayeh", "philip-starr", "nader-pouratian"]
+    },
+    "HIGH": {
+      "description": "Strategic collaborations with significant value",
+      "action": "Pursue partnerships, conference networking, joint grant applications",
+      "researchers": ["jaimie-henderson", "richard-andersen", "edward-chang", "michel-maharbiz", "brian-kopell", "nick-steinmetz", "tim-harris", "gregoire-courtine", "dion-khodagholy", "xinyan-tracy-cui", "stephanie-lacour", "john-rogers"]
+    },
+    "MEDIUM": {
+      "description": "Valuable expertise for specific applications",
+      "action": "Monitor publications, attend talks, opportunistic engagement",
+      "researchers": ["charles-lieber", "jacob-robinson"]
+    }
+  }
+}

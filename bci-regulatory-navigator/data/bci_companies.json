@@ -1,0 +1,234 @@
+{
+  "companies": [
+    {
+      "id": "blackrock",
+      "name": "Blackrock Neurotech",
+      "founded": 2008,
+      "headquarters": "Salt Lake City, Utah",
+      "focus": "Brain-computer interface technology for clinical and research applications",
+      "website": "https://blackrockneurotech.com",
+      "leadership": {
+        "ceo": "Marcus Gerhardt",
+        "president": "Florian Solzbacher"
+      },
+      "products": [
+        {
+          "name": "NeuroPort Array",
+          "type": "Intracortical microelectrode array",
+          "electrode_count": 96,
+          "fda_status": "510(k) cleared",
+          "clearance_number": "K110010",
+          "intended_use": "Temporary (<30 day) cortical recording"
+        },
+        {
+          "name": "MoveAgain",
+          "type": "Complete BCI system",
+          "fda_status": "Breakthrough Device Designation",
+          "designation_date": "2021-11-16",
+          "intended_use": "Enable paralyzed patients to control devices through thought",
+          "target_applications": ["cursor control", "keyboard", "wheelchair", "prosthetics"]
+        },
+        {
+          "name": "Neuralace",
+          "type": "Next-generation flexible neural interface",
+          "electrode_count": 10000,
+          "fda_status": "Research/Development",
+          "unveiled": "2022-11",
+          "target_applications": ["whole-brain data capture", "vision restoration", "mental health"]
+        }
+      ],
+      "key_metrics": {
+        "patient_days": 30000,
+        "research_institutions": 500,
+        "first_human_implant": 2004
+      },
+      "regulatory_strategy": {
+        "current_pathway": "IDE for MoveAgain pivotal trial",
+        "likely_approval_pathway": "PMA",
+        "breakthrough_designation": true,
+        "tcet_eligible": true
+      }
+    },
+    {
+      "id": "neuralink",
+      "name": "Neuralink",
+      "founded": 2016,
+      "headquarters": "Fremont, California",
+      "focus": "High-bandwidth, bi-directional brain-computer interfaces",
+      "website": "https://neuralink.com",
+      "leadership": {
+        "founder": "Elon Musk"
+      },
+      "products": [
+        {
+          "name": "N1 Implant",
+          "type": "Wireless brain implant",
+          "electrode_count": 1024,
+          "fda_status": "IDE approved",
+          "ide_approval_date": "2023-05",
+          "clinical_trial": {
+            "name": "PRIME Study",
+            "nct_number": "NCT06429735",
+            "patients_enrolled": 5,
+            "first_implant": "2024-01"
+          }
+        },
+        {
+          "name": "Blindsight",
+          "type": "Visual cortex implant",
+          "fda_status": "Breakthrough Device Designation",
+          "designation_date": "2024-09",
+          "intended_use": "Vision restoration"
+        }
+      ],
+      "regulatory_strategy": {
+        "current_pathway": "IDE clinical trial",
+        "likely_approval_pathway": "PMA",
+        "breakthrough_designation": true
+      }
+    },
+    {
+      "id": "synchron",
+      "name": "Synchron",
+      "founded": 2012,
+      "headquarters": "Brooklyn, NY",
+      "focus": "Minimally-invasive endovascular BCI",
+      "website": "https://synchron.com",
+      "leadership": {
+        "founder_ceo": "Dr. Tom Oxley"
+      },
+      "products": [
+        {
+          "name": "Stentrode",
+          "type": "Endovascular brain implant",
+          "electrode_count": 16,
+          "implantation_method": "Via jugular vein (no open brain surgery)",
+          "fda_status": "IDE approved",
+          "clinical_trials": [
+            {
+              "name": "SWITCH Study",
+              "location": "Australia",
+              "nct_number": "NCT03834857",
+              "patients": 7
+            },
+            {
+              "name": "COMMAND Study",
+              "location": "United States",
+              "nct_number": "NCT05035823",
+              "patients": 6,
+              "status": "Primary endpoint met (Sept 2024)"
+            }
+          ]
+        }
+      ],
+      "key_achievements": {
+        "first_permanently_implanted_bci_ide": "2021-08",
+        "deployment_accuracy": "100%",
+        "median_deployment_time_minutes": 20
+      },
+      "regulatory_strategy": {
+        "current_pathway": "Preparing pivotal trial",
+        "likely_approval_pathway": "PMA or De Novo",
+        "breakthrough_designation": true
+      }
+    },
+    {
+      "id": "precision",
+      "name": "Precision Neuroscience",
+      "founded": 2021,
+      "headquarters": "New York, NY",
+      "focus": "High-density, minimally-invasive cortical interface",
+      "leadership": {
+        "founder": "Dr. Benjamin Rapoport"
+      },
+      "products": [
+        {
+          "name": "Layer 7-T Cortical Interface",
+          "type": "Ultra-thin film electrode array",
+          "electrode_count": 1024,
+          "fda_status": "510(k) CLEARED",
+          "clearance_number": "K242618",
+          "clearance_date": "2025-03-30",
+          "intended_use": "Temporary (<30 day) cortical recording, monitoring, stimulation"
+        }
+      ],
+      "key_achievement": "First high-channel-count BCI to achieve 510(k) clearance",
+      "regulatory_strategy": {
+        "strategy": "Hardware-first 510(k), then expand indications",
+        "predicates_used": ["K191186 (Ad-Tech)", "K192764 (NeuroOne)"],
+        "time_to_clearance_days": 31
+      }
+    },
+    {
+      "id": "paradromics",
+      "name": "Paradromics",
+      "founded": 2015,
+      "headquarters": "Austin, Texas",
+      "focus": "High-bandwidth, fully implantable BCI for speech restoration",
+      "leadership": {
+        "founder_ceo": "Matt Angle, PhD"
+      },
+      "products": [
+        {
+          "name": "Connexus BCI",
+          "type": "High-bandwidth brain implant",
+          "electrode_count": 421,
+          "fda_status": "IDE approved",
+          "ide_approval_date": "2025-11",
+          "performance": {
+            "bit_rate_bps": 200,
+            "latency_ms": 56
+          },
+          "clinical_trial": {
+            "name": "Connect-One Study",
+            "target_start": "Q1 2026",
+            "indication": "Speech restoration"
+          }
+        }
+      ],
+      "key_achievement": "First IDE for speech restoration with fully implantable BCI",
+      "regulatory_strategy": {
+        "current_pathway": "IDE clinical trial",
+        "likely_approval_pathway": "PMA"
+      }
+    },
+    {
+      "id": "cognixion",
+      "name": "Cognixion",
+      "focus": "Non-invasive BCI + AR headset",
+      "products": [
+        {
+          "name": "ONE Headset",
+          "type": "EEG-based BCI with AR",
+          "fda_status": "Breakthrough Device Designation",
+          "designation_date": "2023",
+          "intended_use": "Speech-generating device"
+        }
+      ],
+      "key_achievement": "CMS DME supplier accreditation (May 2023)",
+      "regulatory_strategy": {
+        "pathway": "De Novo likely",
+        "reimbursement": "DME pathway"
+      }
+    },
+    {
+      "id": "neurolutions",
+      "name": "Neurolutions",
+      "focus": "Stroke rehabilitation BCI",
+      "products": [
+        {
+          "name": "IpsiHand",
+          "type": "Non-invasive BCI for stroke rehab",
+          "fda_status": "De Novo CLASSIFIED",
+          "clearance_date": "2021",
+          "cms_coverage": {
+            "decision_date": "2025-01",
+            "benefit_category": "Durable Medical Equipment (DME)",
+            "cpt_code": "Dedicated code assigned"
+          }
+        }
+      ],
+      "key_achievement": "FIRST BCI with dedicated CMS reimbursement"
+    }
+  ]
+}

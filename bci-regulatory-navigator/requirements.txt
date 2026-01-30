@@ -1,0 +1,21 @@
+# BCI Regulatory Navigator - Requirements
+# Core dependencies (standard library only - no external packages needed for basic functionality)
+
+# Optional: For enhanced NLP capabilities (uncomment if desired)
+# sentence-transformers>=2.2.0  # For transformer-based embeddings
+# torch>=2.0.0                  # Required by sentence-transformers
+# numpy>=1.24.0                 # For numerical operations
+
+# Optional: For API integration (uncomment if building a web interface)
+# fastapi>=0.100.0
+# uvicorn>=0.22.0
+# pydantic>=2.0.0
+
+# Optional: For advanced search (uncomment if scaling up)
+# faiss-cpu>=1.7.0              # Facebook's similarity search
+# chromadb>=0.4.0               # Vector database
+
+# Development dependencies
+# pytest>=7.0.0
+# black>=23.0.0
+# mypy>=1.0.0

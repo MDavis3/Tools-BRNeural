@@ -1,0 +1,237 @@
+{
+  "neuralace_development_phases": [
+    {
+      "phase": 1,
+      "name": "Research Use Only (RUO)",
+      "timeline": "2024-2025",
+      "regulatory_status": "No FDA approval required",
+      "description": "Distribution to neuroscience research community for non-clinical use",
+      "requirements": [
+        "Label device as 'For Research Use Only'",
+        "Do not promote for clinical use",
+        "IRB approval if used in human subjects research",
+        "Material transfer agreements for academic partners"
+      ],
+      "target_customers": [
+        "Academic neuroscience labs",
+        "Research consortiums (e.g., BRAIN Initiative)",
+        "Government research facilities",
+        "Pharma R&D partners"
+      ],
+      "manufacturing_requirements": "GMP recommended but not required",
+      "risks": [
+        "Cannot make clinical claims",
+        "Limited revenue potential",
+        "Competitor research adoption"
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "Visual Prosthesis IDE",
+      "timeline": "2026-2028",
+      "regulatory_status": "IDE required for human clinical study",
+      "description": "Early Feasibility Study for cortical visual prosthesis",
+      "indication": "Severe to total blindness from visual pathway damage",
+      "study_design": {
+        "type": "Early Feasibility Study",
+        "patients": "6-10",
+        "follow_up_years": 5,
+        "primary_endpoint": "Safety (SAEs, device-related AEs)",
+        "secondary_endpoint": "Phosphene perception, functional vision"
+      },
+      "requirements": [
+        "Preclinical biocompatibility studies",
+        "Non-human primate efficacy data",
+        "Full GMP manufacturing",
+        "IRB and FDA IDE approval"
+      ],
+      "regulatory_precedent": {
+        "device": "Orion Cortical Visual Prosthesis",
+        "company": "Second Sight/Cortigent",
+        "nct": "NCT03344848",
+        "status": "Early Feasibility Study ongoing"
+      }
+    },
+    {
+      "phase": 3,
+      "name": "Visual Prosthesis HDE Approval",
+      "timeline": "2029-2031",
+      "regulatory_status": "Humanitarian Device Exemption",
+      "description": "Commercial approval for cortical visual prosthesis",
+      "pathway_rationale": "Patient population <8,000/year qualifies for HDE",
+      "hde_requirements": [
+        "Demonstrate probable benefit outweighs risks",
+        "Not required to demonstrate effectiveness",
+        "IRB approval at each implanting institution",
+        "Post-approval study possible"
+      ],
+      "precedent": {
+        "device": "Argus II Retinal Prosthesis",
+        "hde_number": "H110002",
+        "approval_date": "2013-02",
+        "indication": "Severe to profound retinitis pigmentosa"
+      },
+      "alternative_pathway": {
+        "name": "PMA",
+        "when": "If population exceeds HDE threshold or sponsor prefers",
+        "additional_time_years": "2-3"
+      }
+    },
+    {
+      "phase": 4,
+      "name": "Mental Health Applications",
+      "timeline": "2030+",
+      "regulatory_status": "Additional IDE studies required",
+      "target_indications": [
+        {
+          "indication": "Treatment-Resistant Depression",
+          "population_size_us": 3000000,
+          "pathway": "PMA (too large for HDE)",
+          "precedent": "DBS trials for depression (failed); TMS for depression (approved)"
+        },
+        {
+          "indication": "Severe Treatment-Resistant OCD",
+          "population_size_us": 50000,
+          "pathway": "HDE possible",
+          "precedent": "DBS for OCD HDE (2009)"
+        },
+        {
+          "indication": "Memory Enhancement",
+          "population_size_us": "TBD",
+          "pathway": "Novel indication - pathway TBD",
+          "precedent": "DARPA RAM program research"
+        }
+      ],
+      "regulatory_challenges": [
+        "DBS depression trials failed effectiveness endpoints",
+        "Higher evidence bar for psychiatric indications",
+        "Patient selection criteria critical"
+      ]
+    }
+  ],
+  "research_device_regulations": {
+    "ruo_labeling": {
+      "required_statement": "For Research Use Only. Not for use in diagnostic procedures.",
+      "regulation": "21 CFR 809.10(c)",
+      "restrictions": [
+        "Cannot be promoted for clinical use",
+        "Cannot make diagnostic or treatment claims",
+        "Cannot be distributed for clinical purposes"
+      ]
+    },
+    "ide_exemptions": {
+      "regulation": "21 CFR 812.2(c)",
+      "exempt_categories": [
+        "Legally marketed device used according to labeling",
+        "Device for veterinary use",
+        "Device shipped solely for research on laboratory animals",
+        "Custom device as defined in 21 CFR 812.3(b)",
+        "Device undergoing consumer preference testing"
+      ]
+    },
+    "non_significant_risk": {
+      "description": "Abbreviated IDE pathway for lower-risk studies",
+      "requirements": [
+        "IRB determines device is NSR",
+        "No FDA IDE submission required",
+        "Still requires IRB approval and informed consent",
+        "Sponsor must comply with labeling and record-keeping"
+      ],
+      "not_applicable_to": "Implantable neural devices (typically SR)"
+    }
+  },
+  "visual_prosthesis_landscape": {
+    "approved_devices": [
+      {
+        "name": "Argus II",
+        "company": "Second Sight",
+        "type": "Retinal prosthesis",
+        "electrodes": 60,
+        "pathway": "HDE",
+        "approval_date": "2013-02",
+        "status": "Discontinued (company bankruptcy)"
+      }
+    ],
+    "in_development": [
+      {
+        "name": "Orion",
+        "company": "Cortigent (formerly Second Sight)",
+        "type": "Cortical visual prosthesis",
+        "electrodes": 60,
+        "status": "Early Feasibility Study",
+        "nct": "NCT03344848"
+      },
+      {
+        "name": "Neuralace Visual",
+        "company": "Blackrock Neurotech",
+        "type": "High-density cortical prosthesis",
+        "electrodes": 10000,
+        "status": "Preclinical",
+        "target_first_human": 2028
+      }
+    ],
+    "key_regulatory_considerations": [
+      "Long-term implant requires extensive biocompatibility testing",
+      "Visual cortex stimulation is significant risk",
+      "Small patient population favors HDE pathway",
+      "Post-market surveillance likely required"
+    ]
+  },
+  "mental_health_device_landscape": {
+    "tms_precedents": [
+      {
+        "device": "NeuroStar",
+        "company": "Neuronetics",
+        "indication": "MDD",
+        "pathway": "510(k)",
+        "k_number": "K083538",
+        "year": 2008
+      },
+      {
+        "device": "Brainsway DTMS",
+        "company": "Brainsway",
+        "indication": "OCD",
+        "pathway": "De Novo",
+        "den_number": "DEN170078",
+        "year": 2018
+      },
+      {
+        "device": "SAINT",
+        "company": "Magnus Medical",
+        "indication": "Treatment-resistant depression",
+        "pathway": "510(k)",
+        "year": 2022
+      }
+    ],
+    "dbs_precedents": [
+      {
+        "device": "Reclaim",
+        "company": "Medtronic",
+        "indication": "OCD",
+        "pathway": "HDE",
+        "year": 2009,
+        "notes": "Only approved psychiatric DBS indication"
+      }
+    ],
+    "dbs_depression_failures": [
+      {
+        "trial": "BROADEN",
+        "target": "Subcallosal cingulate (Area 25)",
+        "outcome": "Failed to meet primary endpoint",
+        "year": 2017
+      },
+      {
+        "trial": "RECLAIM",
+        "target": "Ventral capsule/ventral striatum",
+        "outcome": "Failed to meet primary endpoint",
+        "year": 2015
+      }
+    ],
+    "implications_for_neuralace": [
+      "Non-invasive TMS has easier regulatory path than invasive DBS",
+      "DBS depression trials failed - high bar for invasive approaches",
+      "OCD HDE provides model for severe, treatment-resistant cases",
+      "Patient selection and trial design critical for success"
+    ]
+  }
+}
