@@ -15,7 +15,7 @@ import plotly.graph_objects as go
 import pandas as pd
 from datetime import datetime
 
-from neuralace_engine.ingestor import PatientDataIngestor
+from neuralace_engine.ingestor import PatientDataIngestor, RELEVANT_SUBREDDITS, ALL_SUBREDDITS
 from neuralace_engine.analyzer import PainPointAnalyzer
 from neuralace_engine.statistics import StatisticalAnalyzer
 from neuralace_engine.competitors import CompetitorAnalyzer
@@ -39,10 +39,17 @@ apply_custom_css()
 
 
 @st.cache_data(ttl=300)
-def load_data(mode: str = "simulation"):
+def load_data(mode: str = "simulation",
+              subreddits: tuple = (),
+              limit: int = 100,
+              search_terms: tuple = ()):
     """Load patient data."""
     ingestor = PatientDataIngestor(mode=mode)
-    data = ingestor.fetch_data(subreddits=['ALS', 'spinalcordinjuries'], limit=100)
+    data = ingestor.fetch_data(
+        subreddits=list(subreddits),
+        limit=limit,
+        search_terms=list(search_terms) if search_terms else None
+    )
     return data
 
 
@@ -305,9 +312,53 @@ def render_sidebar():
         )
 
         if mode == 'simulation':
-            st.info("**Simulation Mode**\n\nUsing 23 pre-loaded patient comments for demonstration. These are realistic examples based on real patient discussions.")
+            st.info("**Simulation Mode**\n\nUsing 37 pre-loaded patient comments for demonstration. These are realistic examples based on real patient discussions.")
         else:
             st.warning("**Live Mode**\n\nRequires Reddit API credentials in `.streamlit/secrets.toml`:\n\n```\nREDDIT_CLIENT_ID=...\nREDDIT_CLIENT_SECRET=...\n```")
+
+        st.markdown("---")
+
+        # Subreddit selection
+        st.markdown("### ðŸ“ Data Sources")
+        use_all = st.checkbox(
+            f"Use all curated subreddits ({len(ALL_SUBREDDITS)})",
+            value=True
+        )
+
+        if use_all:
+            selected_subreddits = ALL_SUBREDDITS
+        else:
+            categories = st.multiselect(
+                "Subreddit categories",
+                options=list(RELEVANT_SUBREDDITS.keys()),
+                default=['patient']
+            )
+
+            category_subs = []
+            for cat in categories:
+                category_subs.extend(RELEVANT_SUBREDDITS.get(cat, []))
+
+            if category_subs:
+                selected_subreddits = st.multiselect(
+                    "Select subreddits",
+                    options=sorted(set(category_subs)),
+                    default=category_subs
+                )
+            else:
+                selected_subreddits = st.multiselect(
+                    "Select subreddits",
+                    options=sorted(set(ALL_SUBREDDITS)),
+                    default=['ALS', 'spinalcordinjuries']
+                )
+
+        st.caption(f"Selected: {len(selected_subreddits)} communities")
+
+        # Optional search terms for live mode
+        search_input = st.text_input(
+            "Optional search terms (comma-separated)",
+            value="Neuralace, BCI, implant, neuralink" if mode == 'live' else ""
+        )
+        search_terms = tuple([t.strip() for t in search_input.split(",") if t.strip()])
 
         st.markdown("---")
 
@@ -328,22 +379,14 @@ def render_sidebar():
 
         st.markdown("---")
 
-        # Subreddits info
-        st.markdown("### 📍 Data Sources")
-        st.markdown("""
-        **Subreddits analyzed:**
-        - r/ALS
-        - r/spinalcordinjuries
-
-        These communities discuss BCI experiences and pain points.
-        """)
-
         return {
             'mode': mode,
             'period': period,
             'show_sentiment': show_sentiment,
             'show_trends': show_trends,
-            'show_competitors': show_competitors
+            'show_competitors': show_competitors,
+            'subreddits': selected_subreddits,
+            'search_terms': search_terms
         }
 
 
@@ -372,7 +415,12 @@ def main():
 
     # Load and analyze data
     with st.spinner("Loading patient data..."):
-        data = load_data(mode=settings['mode'])
+        data = load_data(
+            mode=settings['mode'],
+            subreddits=tuple(settings['subreddits']),
+            limit=150,
+            search_terms=tuple(settings['search_terms'])
+        )
 
     with st.spinner("Analyzing pain points..."):
         results = analyze_data(data, period=settings['period'])

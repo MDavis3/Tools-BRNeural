@@ -92,7 +92,7 @@ def render_navigation_cards():
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    col4, col5 = st.columns(2)
+    col4, col5, col6 = st.columns(3)
 
     with col4:
         st.markdown("""
@@ -121,6 +121,20 @@ def render_navigation_cards():
         """, unsafe_allow_html=True)
         if st.button("Open Reports →", key="nav_reports", use_container_width=True):
             st.switch_page("pages/5_Strategic_Reports.py")
+
+    with col6:
+        st.markdown("""
+        <div class="nav-card">
+            <div class="nav-card-icon">🕵️</div>
+            <div class="nav-card-title">Competitor Spy</div>
+            <div class="nav-card-desc">
+                Monitor competitor sitemaps to detect new pages,
+                pricing changes, and strategic signals early.
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        if st.button("Open Spy →", key="nav_spy", use_container_width=True):
+            st.switch_page("pages/6_Competitor_Spy.py")
 
 
 def render_quick_stats():
@@ -189,6 +203,7 @@ def render_sidebar():
         st.page_link("pages/3_Research_Intel.py", label="📚 Research", icon="3️⃣")
         st.page_link("pages/4_Competitive_Landscape.py", label="🏢 Competitors", icon="4️⃣")
         st.page_link("pages/5_Strategic_Reports.py", label="📊 Reports", icon="5️⃣")
+        st.page_link("pages/6_Competitor_Spy.py", label="🕵️ Spy", icon="6️⃣")
 
         st.markdown("---")
 

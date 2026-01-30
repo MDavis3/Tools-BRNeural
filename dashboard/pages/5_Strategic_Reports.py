@@ -186,7 +186,10 @@ def render_custom_analysis():
         return
 
     # Check for API key
-    api_key = os.environ.get('ANTHROPIC_API_KEY') or st.secrets.get('ANTHROPIC_API_KEY', '')
+    try:
+        api_key = st.secrets["ANTHROPIC_API_KEY"]
+    except Exception:
+        api_key = ""
 
     if not api_key:
         st.warning("ANTHROPIC_API_KEY not found. Add it to your environment or Streamlit secrets.")

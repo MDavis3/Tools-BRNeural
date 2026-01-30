@@ -20,7 +20,39 @@ These tools demonstrate the intersection of **AI capabilities** and **BCI domain
 
 ## 🧠 Tools Included
 
-### 1. BCI Regulatory Pathway Navigator
+### 1. BCI Intelligence Hub Dashboard (Streamlit)
+**Location:** `dashboard/`
+
+A unified, multi-page web dashboard that brings all intelligence streams into one place for non-technical users.
+
+**Pages:**
+- 👥 Patient Voice Analysis (Reddit community insights + pain point mining)
+- 🧭 Regulatory Navigator (FDA pathways, predicates, reimbursement)
+- 📚 Research Intel (papers, labs, neuralace-relevant findings)
+- 🏢 Competitive Landscape (market map + milestones)
+- 🕵️ Competitor Spy (sitemap monitoring + early launch signals)
+- 📊 Strategic Reports (executive summaries + Claude analysis + exports)
+
+**Run:**
+```bash
+streamlit run dashboard/app.py
+```
+
+---
+
+### 2. Neuralace Patient Voice Engine
+**Location:** `neuralace_engine/`
+
+Core ingestion + analysis engine powering patient sentiment, pain points, and competitor mentions.
+
+**Capabilities:**
+- Live Reddit ingestion (PRAW) or simulation mode
+- Pain point classification, sentiment, trends
+- Competitor mention tracking
+
+---
+
+### 3. BCI Regulatory Pathway Navigator
 **Location:** `bci-regulatory-navigator/`
 
 An AI-powered tool for navigating FDA regulatory pathways for brain-computer interface devices.
@@ -48,7 +80,7 @@ python cli.py pathway 510k           # Pathway details
 
 ---
 
-### 2. BCI Literature Intelligence Agent
+### 4. BCI Literature Intelligence Agent
 **Location:** `bci-literature-agent/`
 
 An AI agent for tracking neural interface research papers, labs, and key researchers.
@@ -75,6 +107,11 @@ python cli.py search "depression"    # Topic search
 ```
 
 ---
+
+### 5. FastAPI Backend (Optional)
+**Location:** `api/`
+
+REST API endpoints to expose intelligence data to other tools and integrations.
 
 ## 🎯 Neuralace Focus
 
@@ -145,24 +182,17 @@ project/
 ## 📁 Repository Structure
 
 ```
-Tools-BRNeural/
-├── README.md                      # This file
-├── PORTFOLIO.md                   # Executive summary for applications
-├── bci-regulatory-navigator/      # Regulatory intelligence tool
-│   ├── README.md
-│   ├── requirements.txt
-│   ├── research/                  # 6 research documents
-│   ├── data/                      # 4 JSON databases
-│   ├── src/                       # Python CLI
-│   └── index/                     # Search index
-└── bci-literature-agent/          # Literature monitoring tool
-    ├── README.md
-    ├── research/                  # 5 research documents
-    ├── data/                      # 3 JSON databases
-    └── src/                       # Python CLI
+Blackrock/
+├── dashboard/                  # Streamlit Intelligence Hub
+├── neuralace_engine/            # Patient Voice engine + analytics
+├── api/                         # FastAPI backend (optional)
+├── bci-regulatory-navigator/    # Regulatory intelligence tool
+├── bci-literature-agent/        # Literature monitoring tool
+├── PORTFOLIO.md                 # Executive summary
+├── README.md                    # This file
+├── requirements.txt            # Streamlit app deps
+└── main.py                      # Legacy entry (if used)
 ```
-
----
 
 ## 🚀 Future Expansion Ideas
 
