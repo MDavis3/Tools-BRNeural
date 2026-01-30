@@ -1,8 +1,8 @@
 # BCI Intelligence Tools for Blackrock Neurotech
 
 **Author:** Manav Davis  
-**Email:** [Your Email]  
-**LinkedIn:** [Your LinkedIn]  
+**Email:** manav_davis@brown.edu 
+**LinkedIn:** https://www.linkedin.com/in/manavdavis313/  
 **Created:** January 2026
 
 ---
