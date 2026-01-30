@@ -56,9 +56,9 @@ def render_welcome_section():
             regulatory guidance, and research insights.
         </p>
         <p style="margin-bottom: 0;">
-            <strong>New here?</strong> Start with the <strong>Patient Voice</strong> tab to see
-            real patient pain points, or explore <strong>Research Intel</strong> to discover
-            breakthrough papers in the field.
+            <strong>New here?</strong> Start with <strong>Regulatory Navigator</strong> for FDA pathways,
+            explore <strong>Research Intel</strong> for breakthrough papers, or try <strong>Competitor Spy</strong>
+            to spot new product signals early.
         </p>
     </div>
     """, unsafe_allow_html=True)

@@ -37,6 +37,11 @@ st.set_page_config(
 
 apply_custom_css()
 
+# Temporarily disabled while Reddit API access is unavailable.
+st.warning("Patient Voice Analysis is temporarily disabled (Reddit API access required).")
+st.info("This page will return once credentials are configured.")
+st.stop()
+
 
 @st.cache_data(ttl=300)
 def load_data(mode: str = "simulation",

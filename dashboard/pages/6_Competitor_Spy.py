@@ -28,10 +28,19 @@ from components.metrics import render_metric_row
 from components.help_system import render_page_help
 
 
+EMOJI_SPY = "\U0001F575\ufe0f"
+EMOJI_TARGET = "\U0001F3AF"
+EMOJI_CHART = "\U0001F4CA"
+EMOJI_ALERT = "\U0001F6A8"
+EMOJI_EXPORT = "\U0001F4E4"
+EMOJI_FOLDER = "\U0001F4C2"
+EMOJI_PIN = "\U0001F4CD"
+EMOJI_SEARCH = "\U0001F50D"
+
 # Page configuration
 st.set_page_config(
     page_title="Competitor Spy | BCI Intelligence Hub",
-    page_icon="ðŸ•µï¸",
+    page_icon=EMOJI_SPY,
     layout="wide"
 )
 
@@ -197,20 +206,60 @@ def build_dataframe(rows: List[Dict]) -> pd.DataFrame:
 
 
 def render_header():
-    st.markdown("""
-    <h1 class="main-header">ðŸ•µï¸ Competitor Spy</h1>
-    <p class="sub-header">Monitor competitor sitemaps for new product pages, pricing changes, and strategic signals</p>
+    st.markdown(f"""
+    <h1 class="main-header">{EMOJI_SPY} Competitor Spy</h1>
+    <p class="sub-header">Track competitor sitemaps to spot launches, pricing changes, and strategic shifts early</p>
     """, unsafe_allow_html=True)
+
+
+def render_purpose():
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown(f"""
+        <div class="nav-card">
+            <div class="nav-card-icon">{EMOJI_TARGET}</div>
+            <div class="nav-card-title">1) Add targets</div>
+            <div class="nav-card-desc">
+                Enter competitor domains. We auto-discover sitemaps from robots.txt
+                or use /sitemap.xml directly.
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown(f"""
+        <div class="nav-card">
+            <div class="nav-card-icon">{EMOJI_SEARCH}</div>
+            <div class="nav-card-title">2) Scan URLs</div>
+            <div class="nav-card-desc">
+                Parse sitemap indexes and URL lists, then tag pages by signal type
+                (product, pricing, integrations, clinical, etc.).
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col3:
+        st.markdown(f"""
+        <div class="nav-card">
+            <div class="nav-card-icon">{EMOJI_ALERT}</div>
+            <div class="nav-card-title">3) Spot changes</div>
+            <div class="nav-card-desc">
+                Compare against a baseline to highlight new URLs that may indicate
+                upcoming launches or strategic moves.
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
 
 def render_sidebar() -> Dict:
     with st.sidebar:
-        st.markdown("### ðŸ•µï¸ Competitor Spy")
+        st.markdown(f"### {EMOJI_SPY} Competitor Spy")
         st.markdown("---")
 
         st.markdown("#### Targets")
         use_defaults = st.checkbox("Use default BCI competitor list", value=True)
-        default_domains = "\n".join([c["domain"] for c in DEFAULT_COMPETITORS])
+        default_domains = "\\n".join([c["domain"] for c in DEFAULT_COMPETITORS])
         domains_input = st.text_area(
             "Competitor domains (one per line)",
             value=default_domains if use_defaults else "",
@@ -229,6 +278,10 @@ def render_sidebar() -> Dict:
             "Upload baseline CSV (optional)",
             type=["csv"]
         )
+
+        st.markdown("---")
+        st.markdown("#### How to use")
+        st.caption("Add domains, click Scan, then review New URLs + Signal Pages.")
 
         return {
             "domains": [normalize_domain(d) for d in domains_input.splitlines() if normalize_domain(d)],
@@ -296,19 +349,19 @@ def render_results(domains: List[str], use_robots: bool, max_sitemaps: int,
 
     # Metrics
     total_urls = len(df)
-    new_urls = df["new"].sum()
+    new_urls = int(df["new"].sum())
     total_domains = df["domain"].nunique()
 
     metrics = [
-        {"icon": "ðŸ”", "label": "Domains Scanned", "value": total_domains, "delta": f"{max_sitemaps} sitemaps max"},
-        {"icon": "ðŸ—‚ï¸", "label": "URLs Collected", "value": total_urls, "delta": "Unique URLs"},
-        {"icon": "ðŸš¨", "label": "New URLs", "value": int(new_urls), "delta": "vs baseline"},
-        {"icon": "ðŸ“Œ", "label": "Signal Pages", "value": int((df['signals'] != 'General').sum()), "delta": "Tagged intel"},
+        {"icon": EMOJI_SEARCH, "label": "Domains Scanned", "value": total_domains, "delta": f"{max_sitemaps} sitemaps max"},
+        {"icon": EMOJI_FOLDER, "label": "URLs Collected", "value": total_urls, "delta": "Unique URLs"},
+        {"icon": EMOJI_ALERT, "label": "New URLs", "value": new_urls, "delta": "vs baseline"},
+        {"icon": EMOJI_PIN, "label": "Signal Pages", "value": int((df['signals'] != 'General').sum()), "delta": "Tagged intel"},
     ]
     render_metric_row(metrics)
 
     # Signal distribution
-    st.subheader("ðŸ“Š Signal Breakdown")
+    st.subheader(f"{EMOJI_CHART} Signal Breakdown")
     signal_counts = df["signals"].str.get_dummies(sep=", ").sum().sort_values(ascending=False)
     signal_df = pd.DataFrame({"Signal": signal_counts.index, "Count": signal_counts.values})
     fig = px.bar(signal_df, x="Count", y="Signal", orientation="h", title="Signal Tags Found")
@@ -316,7 +369,7 @@ def render_results(domains: List[str], use_robots: bool, max_sitemaps: int,
     st.plotly_chart(fig, use_container_width=True)
 
     # New URLs table
-    st.subheader("ðŸš¨ Newly Detected URLs")
+    st.subheader(f"{EMOJI_ALERT} Newly Detected URLs")
     new_df = df[df["new"]].sort_values(["domain", "url"])
     if new_df.empty:
         st.info("No new URLs detected for this baseline.")
@@ -324,12 +377,12 @@ def render_results(domains: List[str], use_robots: bool, max_sitemaps: int,
         st.dataframe(new_df[["domain", "url", "path", "lastmod", "signals"]], use_container_width=True)
 
     # High-signal URLs
-    st.subheader("ðŸ”¥ High-Signal URLs")
+    st.subheader("High-Signal URLs")
     signal_df = df[df["signals"] != "General"].sort_values(["domain", "signals"])
     st.dataframe(signal_df[["domain", "url", "path", "lastmod", "signals"]], use_container_width=True)
 
     # Per-domain detail
-    st.subheader("ðŸ“‚ Per-Domain URL Explorer")
+    st.subheader(f"{EMOJI_FOLDER} Per-Domain URL Explorer")
     for domain in df["domain"].unique():
         with st.expander(f"{domain} ({len(df[df['domain'] == domain])} URLs)"):
             st.dataframe(
@@ -342,7 +395,7 @@ def render_results(domains: List[str], use_robots: bool, max_sitemaps: int,
             st.caption(f"Errors: {', '.join(error_log[domain][:3])}")
 
     # Export
-    st.subheader("ðŸ“¤ Export")
+    st.subheader(f"{EMOJI_EXPORT} Export")
     csv = df.to_csv(index=False)
     st.download_button(
         "Download Sitemap URLs CSV",
@@ -368,9 +421,11 @@ def main():
         ]
     )
 
+    render_purpose()
+    st.markdown("---")
+
     settings = render_sidebar()
 
-    st.markdown("---")
     if st.button("Scan Sitemaps", type="primary"):
         render_results(
             settings["domains"],

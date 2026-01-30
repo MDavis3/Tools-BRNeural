@@ -44,28 +44,20 @@ def render_header():
 
 def render_navigation_cards():
     """Render navigation cards to each section."""
+    icon_reg = "📋"
+    icon_research = "📚"
+    icon_comp = "🏢"
+    icon_reports = "📊"
+    icon_spy = "🕵️"
+
     st.markdown("### Explore Intelligence Tools")
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("""
+        st.markdown(f"""
         <div class="nav-card">
-            <div class="nav-card-icon">👥</div>
-            <div class="nav-card-title">Patient Voice Analysis</div>
-            <div class="nav-card-desc">
-                Mine patient communities for pain points, sentiment analysis,
-                and competitive intelligence from real user experiences.
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        if st.button("Open Patient Voice →", key="nav_patient", use_container_width=True):
-            st.switch_page("pages/1_Patient_Voice.py")
-
-    with col2:
-        st.markdown("""
-        <div class="nav-card">
-            <div class="nav-card-icon">📋</div>
+            <div class="nav-card-icon">{icon_reg}</div>
             <div class="nav-card-title">Regulatory Navigator</div>
             <div class="nav-card-desc">
                 FDA pathway guidance, predicate device search, and
@@ -73,13 +65,13 @@ def render_navigation_cards():
             </div>
         </div>
         """, unsafe_allow_html=True)
-        if st.button("Open Regulatory →", key="nav_regulatory", use_container_width=True):
+        if st.button("Open Regulatory ->", key="nav_regulatory", use_container_width=True):
             st.switch_page("pages/2_Regulatory_Navigator.py")
 
-    with col3:
-        st.markdown("""
+    with col2:
+        st.markdown(f"""
         <div class="nav-card">
-            <div class="nav-card-icon">📚</div>
+            <div class="nav-card-icon">{icon_research}</div>
             <div class="nav-card-title">Research Intelligence</div>
             <div class="nav-card-desc">
                 Curated database of breakthrough papers, leading labs,
@@ -87,17 +79,17 @@ def render_navigation_cards():
             </div>
         </div>
         """, unsafe_allow_html=True)
-        if st.button("Open Research →", key="nav_research", use_container_width=True):
+        if st.button("Open Research ->", key="nav_research", use_container_width=True):
             st.switch_page("pages/3_Research_Intel.py")
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    col4, col5, col6 = st.columns(3)
+    col3, col4, col5 = st.columns(3)
 
-    with col4:
-        st.markdown("""
+    with col3:
+        st.markdown(f"""
         <div class="nav-card">
-            <div class="nav-card-icon">🏢</div>
+            <div class="nav-card-icon">{icon_comp}</div>
             <div class="nav-card-title">Competitive Landscape</div>
             <div class="nav-card-desc">
                 Unified view of all BCI competitors - technology comparison,
@@ -105,13 +97,13 @@ def render_navigation_cards():
             </div>
         </div>
         """, unsafe_allow_html=True)
-        if st.button("Open Competitors →", key="nav_competitors", use_container_width=True):
+        if st.button("Open Competitors ->", key="nav_competitors", use_container_width=True):
             st.switch_page("pages/4_Competitive_Landscape.py")
 
-    with col5:
-        st.markdown("""
+    with col4:
+        st.markdown(f"""
         <div class="nav-card">
-            <div class="nav-card-icon">📊</div>
+            <div class="nav-card-icon">{icon_reports}</div>
             <div class="nav-card-title">Strategic Reports</div>
             <div class="nav-card-desc">
                 Executive insights combining all intelligence sources,
@@ -119,13 +111,13 @@ def render_navigation_cards():
             </div>
         </div>
         """, unsafe_allow_html=True)
-        if st.button("Open Reports →", key="nav_reports", use_container_width=True):
+        if st.button("Open Reports ->", key="nav_reports", use_container_width=True):
             st.switch_page("pages/5_Strategic_Reports.py")
 
-    with col6:
-        st.markdown("""
+    with col5:
+        st.markdown(f"""
         <div class="nav-card">
-            <div class="nav-card-icon">🕵️</div>
+            <div class="nav-card-icon">{icon_spy}</div>
             <div class="nav-card-title">Competitor Spy</div>
             <div class="nav-card-desc">
                 Monitor competitor sitemaps to detect new pages,
@@ -133,7 +125,7 @@ def render_navigation_cards():
             </div>
         </div>
         """, unsafe_allow_html=True)
-        if st.button("Open Spy →", key="nav_spy", use_container_width=True):
+        if st.button("Open Spy ->", key="nav_spy", use_container_width=True):
             st.switch_page("pages/6_Competitor_Spy.py")
 
 
@@ -180,6 +172,12 @@ def render_quick_stats():
 
 def render_sidebar():
     """Render sidebar with info and links."""
+    icon_reg = "📋"
+    icon_research = "📚"
+    icon_comp = "🏢"
+    icon_reports = "📊"
+    icon_spy = "🕵️"
+
     with st.sidebar:
         st.markdown("### 🧠 BCI Intelligence Hub")
         st.markdown("---")
@@ -189,21 +187,20 @@ def render_sidebar():
         This platform provides unified market intelligence for
         Blackrock Neurotech's Neuralace development, combining:
 
-        - **Patient Voice** analysis from communities
         - **Regulatory** pathway guidance
         - **Research** literature database
         - **Competitive** landscape tracking
+        - **Competitor Spy** sitemap monitoring
         """)
 
         st.markdown("---")
 
         st.markdown("#### Quick Links")
-        st.page_link("pages/1_Patient_Voice.py", label="👥 Patient Voice", icon="1️⃣")
-        st.page_link("pages/2_Regulatory_Navigator.py", label="📋 Regulatory", icon="2️⃣")
-        st.page_link("pages/3_Research_Intel.py", label="📚 Research", icon="3️⃣")
-        st.page_link("pages/4_Competitive_Landscape.py", label="🏢 Competitors", icon="4️⃣")
-        st.page_link("pages/5_Strategic_Reports.py", label="📊 Reports", icon="5️⃣")
-        st.page_link("pages/6_Competitor_Spy.py", label="🕵️ Spy", icon="6️⃣")
+        st.page_link("pages/2_Regulatory_Navigator.py", label=f"{icon_reg} Regulatory", icon="2️⃣")
+        st.page_link("pages/3_Research_Intel.py", label=f"{icon_research} Research", icon="3️⃣")
+        st.page_link("pages/4_Competitive_Landscape.py", label=f"{icon_comp} Competitors", icon="4️⃣")
+        st.page_link("pages/5_Strategic_Reports.py", label=f"{icon_reports} Reports", icon="5️⃣")
+        st.page_link("pages/6_Competitor_Spy.py", label=f"{icon_spy} Spy", icon="6️⃣")
 
         st.markdown("---")
 
@@ -247,7 +244,7 @@ def main():
     st.markdown("---")
     st.markdown("""
     <div style="text-align: center; color: #a0a0a0; font-size: 0.85rem;">
-        BCI Intelligence Hub v2.0 | Powered by Neuralace Patient Voice Engine
+        BCI Intelligence Hub v2.0 | Powered by Neuralace Intelligence Stack
         <br>
         Built for Blackrock Neurotech
     </div>
