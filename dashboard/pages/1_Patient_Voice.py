@@ -294,16 +294,22 @@ def render_sidebar():
     with st.sidebar:
         st.markdown("### ⚙️ Analysis Settings")
 
-        # Data mode
+        # Data mode with clear explanation
+        st.markdown("#### Data Source")
         mode = st.radio(
-            "Data Source",
+            "Select data source:",
             options=['simulation', 'live'],
             index=0,
-            help="Use simulation for demo data, live for Reddit API"
+            help="Simulation uses pre-loaded demo data. Live fetches from Reddit API.",
+            label_visibility="collapsed"
         )
 
-        if mode == 'live':
-            st.warning("Live mode requires Reddit API credentials")
+        if mode == 'simulation':
+            st.info("**Simulation Mode**\n\nUsing 23 pre-loaded patient comments for demonstration. These are realistic examples based on real patient discussions.")
+        else:
+            st.warning("**Live Mode**\n\nRequires Reddit API credentials in `.streamlit/secrets.toml`:\n\n```\nREDDIT_CLIENT_ID=...\nREDDIT_CLIENT_SECRET=...\n```")
+
+        st.markdown("---")
 
         # Time period
         period = st.selectbox(
@@ -315,10 +321,22 @@ def render_sidebar():
         st.markdown("---")
 
         # Filters
-        st.markdown("### 🔍 Filters")
+        st.markdown("### 🔍 Display Options")
         show_sentiment = st.checkbox("Show Sentiment Analysis", value=True)
         show_trends = st.checkbox("Show Trend Analysis", value=True)
         show_competitors = st.checkbox("Show Competitor Analysis", value=True)
+
+        st.markdown("---")
+
+        # Subreddits info
+        st.markdown("### 📍 Data Sources")
+        st.markdown("""
+        **Subreddits analyzed:**
+        - r/ALS
+        - r/spinalcordinjuries
+
+        These communities discuss BCI experiences and pain points.
+        """)
 
         return {
             'mode': mode,
@@ -347,6 +365,10 @@ def main():
 
     # Sidebar settings
     settings = render_sidebar()
+
+    # Show data source banner
+    if settings['mode'] == 'simulation':
+        st.warning("**Demo Mode:** Displaying simulated patient data. Switch to 'live' mode in sidebar for real Reddit data (requires API credentials).")
 
     # Load and analyze data
     with st.spinner("Loading patient data..."):

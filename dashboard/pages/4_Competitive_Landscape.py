@@ -3,6 +3,7 @@ Competitive Landscape Page
 ==========================
 
 Unified view of all BCI competitors with technology comparison and market positioning.
+Updated January 2026 with latest regulatory data.
 """
 
 import sys
@@ -30,30 +31,126 @@ st.set_page_config(
 
 apply_custom_css()
 
+# Comprehensive competitor data (updated Jan 2026)
+COMPETITOR_DATA = [
+    {
+        'Company': 'Neuralink',
+        'Key Product': 'N1 Link Implant',
+        'Channels': 1024,
+        'Approach': 'Penetrating (threads)',
+        'Clinical Status': '12 human implants (as of Sept 2025)',
+        'FDA Status': 'IDE Approved (May 2023)',
+        'Funding': '$650M+ (June 2025)',
+        'Wireless': True,
+    },
+    {
+        'Company': 'Synchron',
+        'Key Product': 'Stentrode',
+        'Channels': 16,
+        'Approach': 'Endovascular',
+        'Clinical Status': '10 patients implanted (US + Australia)',
+        'FDA Status': 'IDE Approved, Pivotal Trial 2026',
+        'Funding': '$200M Series D (Nov 2025)',
+        'Wireless': True,
+    },
+    {
+        'Company': 'Paradromics',
+        'Key Product': 'Connexus BCI',
+        'Channels': 1600,
+        'Approach': 'Penetrating (microwires)',
+        'Clinical Status': 'First-in-human recording completed',
+        'FDA Status': 'IDE Approved (Nov 2025), Trial Q1 2026',
+        'Funding': '$85M+',
+        'Wireless': True,
+    },
+    {
+        'Company': 'Precision Neuroscience',
+        'Key Product': 'Layer 7 Cortical Interface',
+        'Channels': 1024,
+        'Approach': 'Surface (thin-film ECoG)',
+        'Clinical Status': '37+ patients across 4 US institutions',
+        'FDA Status': '510(k) Cleared (March 2025)',
+        'Funding': '$100M+',
+        'Wireless': True,
+    },
+    {
+        'Company': 'Blackrock Neurotech',
+        'Key Product': 'MoveAgain / NeuroPort',
+        'Channels': '96-128 (Neuralace: 10,000+)',
+        'Approach': 'Utah Array / Flexible (Neuralace)',
+        'Clinical Status': '30,000+ patient days, 500+ institutions',
+        'FDA Status': 'Breakthrough Designation (Nov 2021)',
+        'Funding': 'Private (Tether backing)',
+        'Wireless': False,
+    },
+    {
+        'Company': 'Cognixion',
+        'Key Product': 'ONE Headset',
+        'Channels': 'Non-invasive EEG',
+        'Approach': 'Non-invasive + AR',
+        'Clinical Status': 'Commercial (DME supplier)',
+        'FDA Status': 'Breakthrough Designation (2023)',
+        'Funding': '$30M+',
+        'Wireless': True,
+    },
+    {
+        'Company': 'Neurolutions',
+        'Key Product': 'IpsiHand',
+        'Channels': 'Non-invasive EEG',
+        'Approach': 'Non-invasive',
+        'Clinical Status': 'Commercial (stroke rehab)',
+        'FDA Status': 'De Novo Classified (2021)',
+        'Funding': 'N/A',
+        'Wireless': True,
+    },
+    {
+        'Company': 'Cortigent (Second Sight)',
+        'Key Product': 'Orion Visual Prosthesis',
+        'Channels': 60,
+        'Approach': 'Cortical (visual)',
+        'Clinical Status': '5-year feasibility complete',
+        'FDA Status': 'Breakthrough Designation',
+        'Funding': 'Acquired by Vivani Medical',
+        'Wireless': True,
+    },
+]
+
+# Updated regulatory timeline (Jan 2026)
+REGULATORY_TIMELINE = [
+    {'Company': 'Synchron', 'Event': 'IDE Approval (first permanent BCI)', 'Date': '2021-08', 'Status': 'Completed'},
+    {'Company': 'Blackrock', 'Event': 'MoveAgain Breakthrough Designation', 'Date': '2021-11', 'Status': 'Granted'},
+    {'Company': 'Neuralink', 'Event': 'FDA IDE Approval', 'Date': '2023-05', 'Status': 'Completed'},
+    {'Company': 'Neuralink', 'Event': 'First Human Implant (Noland Arbaugh)', 'Date': '2024-01', 'Status': 'Completed'},
+    {'Company': 'Neuralink', 'Event': 'Blindsight Breakthrough Designation', 'Date': '2024-09', 'Status': 'Granted'},
+    {'Company': 'Synchron', 'Event': 'COMMAND Trial Primary Endpoint Met', 'Date': '2024-10', 'Status': 'Positive'},
+    {'Company': 'Precision', 'Event': '510(k) Clearance (Layer 7-T)', 'Date': '2025-03', 'Status': 'Cleared'},
+    {'Company': 'Precision', 'Event': 'Nature BME Publication (37 patients)', 'Date': '2025-10', 'Status': 'Published'},
+    {'Company': 'Paradromics', 'Event': 'FDA IDE Approval (Connexus)', 'Date': '2025-11', 'Status': 'Completed'},
+    {'Company': 'Synchron', 'Event': '$200M Series D for Pivotal Trial', 'Date': '2025-11', 'Status': 'Funded'},
+    {'Company': 'Neuralink', 'Event': '12th Human Implant', 'Date': '2025-09', 'Status': 'Completed'},
+    {'Company': 'Paradromics', 'Event': 'Connect-One Trial Start', 'Date': '2026-Q1', 'Status': 'Planned'},
+    {'Company': 'Synchron', 'Event': 'Pivotal Trial Start', 'Date': '2026', 'Status': 'Planned'},
+]
+
 
 def render_header():
     """Render page header."""
     st.markdown("""
     <h1 class="main-header">🏢 Competitive Landscape</h1>
-    <p class="sub-header">BCI Market Intelligence & Competitor Analysis</p>
+    <p class="sub-header">BCI Market Intelligence & Competitor Analysis (Updated Jan 2026)</p>
     """, unsafe_allow_html=True)
 
 
 def render_overview_metrics():
     """Render overview statistics."""
     loader = get_data_loader()
-    competitors = loader.get_all_competitors()
     labs = loader.load_labs()
 
-    # Count by type
-    commercial = len([c for c in competitors if c.get('type') == 'Commercial'])
-    research = len(labs.get('labs', []))
-
     metrics = [
-        {'icon': '🏢', 'label': 'Commercial BCIs', 'value': commercial, 'delta': 'Active competitors'},
-        {'icon': '🔬', 'label': 'Research Labs', 'value': research, 'delta': 'Academic institutions'},
-        {'icon': '📊', 'label': 'Total Tracked', 'value': commercial + research, 'delta': 'Organizations monitored'},
-        {'icon': '🎯', 'label': 'Direct Competitors', 'value': len([c for c in competitors if 'Direct' in c.get('competitive_position', '')]), 'delta': 'High-channel focus'},
+        {'icon': '🏢', 'label': 'Commercial BCIs', 'value': len(COMPETITOR_DATA), 'delta': 'Active competitors'},
+        {'icon': '🔬', 'label': 'Research Labs', 'value': len(labs.get('labs', [])), 'delta': 'Academic institutions'},
+        {'icon': '✅', 'label': 'FDA Cleared/Approved', 'value': 4, 'delta': 'IDE or 510(k)'},
+        {'icon': '🎯', 'label': 'High-Channel (1000+)', 'value': 4, 'delta': 'Direct competitors'},
     ]
 
     render_metric_row(metrics)
@@ -63,60 +160,30 @@ def render_company_matrix():
     """Render company comparison matrix."""
     st.subheader("📊 Company Comparison Matrix")
 
-    loader = get_data_loader()
-    companies = loader.load_bci_companies().get('companies', [])
-    labs_companies = loader.load_labs().get('companies', [])
+    # Create DataFrame from curated data
+    df = pd.DataFrame(COMPETITOR_DATA)
 
-    # Combine companies
-    all_companies = companies + labs_companies
+    # Select columns for display
+    display_df = df[['Company', 'Key Product', 'Channels', 'Clinical Status', 'FDA Status', 'Funding']]
 
-    if not all_companies:
-        st.warning("No company data available")
-        return
+    st.dataframe(display_df, use_container_width=True, hide_index=True)
 
-    # Create comparison data
-    data = []
-    for c in all_companies:
-        products = c.get('key_products', [])
-        product_str = products[0] if products else 'N/A'
-
-        # Extract channel count if mentioned
-        channels = 'N/A'
-        for p in products:
-            if 'channel' in p.lower():
-                # Try to extract number
-                import re
-                match = re.search(r'(\d+[,\d]*)\s*channel', p.lower())
-                if match:
-                    channels = match.group(1)
-
-        data.append({
-            'Company': c.get('name', 'Unknown'),
-            'Key Product': product_str,
-            'Channels': channels,
-            'Focus Areas': ', '.join(c.get('focus_areas', [])[:2]),
-            'Clinical Status': c.get('clinical_status', 'Unknown'),
-            'Position': c.get('competitive_position', 'N/A'),
-            'Funding': c.get('funding', 'N/A'),
-        })
-
-    df = pd.DataFrame(data)
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.caption("Data updated January 2026 from public sources")
 
 
 def render_technology_comparison():
     """Render technology comparison chart."""
     st.subheader("⚡ Technology Comparison")
 
-    # Hardcoded technology specs for visualization
+    # Technology specs for visualization
     tech_data = [
         {'Company': 'Neuralink', 'Channels': 1024, 'Approach': 'Penetrating', 'Wireless': True},
         {'Company': 'Paradromics', 'Channels': 1600, 'Approach': 'Penetrating', 'Wireless': True},
-        {'Company': 'Precision Neuro', 'Channels': 1024, 'Approach': 'Surface (ECoG)', 'Wireless': True},
+        {'Company': 'Precision', 'Channels': 1024, 'Approach': 'Surface (ECoG)', 'Wireless': True},
         {'Company': 'Synchron', 'Channels': 16, 'Approach': 'Endovascular', 'Wireless': True},
-        {'Company': 'BrainGate', 'Channels': 96, 'Approach': 'Utah Array', 'Wireless': False},
-        {'Company': 'Blackrock', 'Channels': 128, 'Approach': 'Utah Array', 'Wireless': False},
-        {'Company': 'Neuralace (Target)', 'Channels': 10000, 'Approach': 'Flexible', 'Wireless': True},
+        {'Company': 'Cortigent', 'Channels': 60, 'Approach': 'Cortical (Visual)', 'Wireless': True},
+        {'Company': 'Blackrock (current)', 'Channels': 128, 'Approach': 'Utah Array', 'Wireless': False},
+        {'Company': 'Neuralace (target)', 'Channels': 10000, 'Approach': 'Flexible', 'Wireless': True},
     ]
 
     df = pd.DataFrame(tech_data)
@@ -173,8 +240,9 @@ def render_market_positioning():
         {'Company': 'Paradromics', 'Channels': 1600, 'Invasiveness': 4, 'Size': 25},
         {'Company': 'Precision', 'Channels': 1024, 'Invasiveness': 3, 'Size': 25},
         {'Company': 'Synchron', 'Channels': 16, 'Invasiveness': 2, 'Size': 20},
-        {'Company': 'BrainGate', 'Channels': 96, 'Invasiveness': 4, 'Size': 20},
-        {'Company': 'Neuralace', 'Channels': 10000, 'Invasiveness': 2, 'Size': 40},
+        {'Company': 'Cortigent', 'Channels': 60, 'Invasiveness': 4, 'Size': 15},
+        {'Company': 'Cognixion', 'Channels': 8, 'Invasiveness': 1, 'Size': 15},
+        {'Company': 'Neuralace (target)', 'Channels': 10000, 'Invasiveness': 2, 'Size': 40},
     ]
 
     df = pd.DataFrame(positioning)
@@ -212,41 +280,31 @@ def render_market_positioning():
 
 def render_regulatory_timeline():
     """Render regulatory progress timeline."""
-    st.subheader("📋 Regulatory Progress Timeline")
+    st.subheader("📋 Regulatory Progress Timeline (2021-2026)")
 
-    timeline_data = [
-        {'Company': 'Neuralink', 'Event': 'IDE Approval', 'Date': '2023-05', 'Status': 'Clinical Trial'},
-        {'Company': 'Neuralink', 'Event': 'First Human Implant', 'Date': '2024-01', 'Status': 'Active'},
-        {'Company': 'Synchron', 'Event': 'IDE Approval', 'Date': '2021-08', 'Status': 'Clinical Trial'},
-        {'Company': 'Synchron', 'Event': 'COMMAND Results', 'Date': '2024-06', 'Status': 'Positive'},
-        {'Company': 'Paradromics', 'Event': 'IDE Approval', 'Date': '2025-11', 'Status': 'Preparing Trial'},
-        {'Company': 'Precision', 'Event': '510(k) Clearance', 'Date': '2025-03', 'Status': 'Cleared'},
-        {'Company': 'Blackrock', 'Event': 'Breakthrough Designation', 'Date': '2021-11', 'Status': 'Active'},
-    ]
+    df = pd.DataFrame(REGULATORY_TIMELINE)
 
-    df = pd.DataFrame(timeline_data)
+    # Sort by date
+    df_sorted = df.sort_values('Date')
 
-    fig = px.timeline(
-        df,
-        x_start='Date',
-        x_end='Date',
-        y='Company',
-        color='Status',
-        title='Regulatory Milestones',
-        hover_data=['Event'],
-        color_discrete_sequence=THEME['chart_colors']
-    )
-
-    # Since timeline needs start/end, we'll use scatter instead
+    # Create scatter timeline
     fig = px.scatter(
-        df,
+        df_sorted,
         x='Date',
         y='Company',
         color='Status',
-        size=[20] * len(df),
+        size=[20] * len(df_sorted),
         hover_data=['Event'],
-        title='Regulatory Milestones Timeline',
-        color_discrete_sequence=THEME['chart_colors']
+        title='BCI Regulatory Milestones',
+        color_discrete_map={
+            'Completed': '#1dd1a1',
+            'Granted': '#54a0ff',
+            'Cleared': '#667eea',
+            'Positive': '#1dd1a1',
+            'Published': '#54a0ff',
+            'Funded': '#feca57',
+            'Planned': '#a0a0a0',
+        }
     )
 
     layout = get_plotly_layout()
@@ -255,7 +313,7 @@ def render_regulatory_timeline():
     st.plotly_chart(fig, use_container_width=True)
 
     # Detailed table
-    st.dataframe(df[['Company', 'Event', 'Date', 'Status']], use_container_width=True, hide_index=True)
+    st.dataframe(df_sorted[['Company', 'Event', 'Date', 'Status']], use_container_width=True, hide_index=True)
 
 
 def render_neuralace_advantage():
@@ -277,15 +335,15 @@ def render_neuralace_advantage():
             st.success(f"**{title}**\n\n{desc}")
 
     with col2:
-        st.markdown("#### Strategic Position")
+        st.markdown("#### Strategic Position vs Competitors")
         st.info("""
-        **vs Neuralink:** Higher channel count target, flexible vs rigid substrate
+        **vs Neuralink (1024 ch):** 10x channel count, flexible vs rigid threads
 
-        **vs Synchron:** Much higher channel count, direct cortical vs endovascular
+        **vs Synchron (16 ch):** 600x channels, direct cortical vs endovascular
 
-        **vs Paradromics:** Similar channel density, different substrate approach
+        **vs Paradromics (1600 ch):** 6x channels, flexible vs penetrating
 
-        **vs Precision:** Similar thin-film approach, Blackrock's clinical experience
+        **vs Precision (1024 ch):** 10x channels, similar thin-film approach, Blackrock's 30K+ patient days experience
         """)
 
 
@@ -296,10 +354,10 @@ def render_sidebar():
         st.markdown("---")
 
         st.markdown("#### Key Competitors")
-        st.markdown("- **Neuralink** - N1 (1024 ch)")
-        st.markdown("- **Paradromics** - Connexus (1600 ch)")
+        st.markdown("- **Neuralink** - N1 (1,024 ch)")
+        st.markdown("- **Paradromics** - Connexus (1,600 ch)")
+        st.markdown("- **Precision** - Layer 7 (1,024 ch)")
         st.markdown("- **Synchron** - Stentrode (16 ch)")
-        st.markdown("- **Precision** - Layer 7 (1024 ch)")
 
         st.markdown("---")
 
@@ -307,6 +365,9 @@ def render_sidebar():
         st.metric("Channel Count", "10,000+")
         st.metric("Approach", "Flexible")
         st.metric("Wireless", "Yes")
+
+        st.markdown("---")
+        st.caption("Data updated Jan 2026")
 
 
 def main():
@@ -318,10 +379,10 @@ def main():
         "Competitive Landscape",
         "Unified view of all BCI competitors with technology and regulatory tracking.",
         [
+            "Data updated January 2026 from public sources",
             "Compare channel counts, approaches, and clinical status",
             "View market positioning relative to competitors",
-            "Track regulatory milestones across companies",
-            "Understand Neuralace's competitive advantages"
+            "Track regulatory milestones across companies"
         ]
     )
 
@@ -352,9 +413,16 @@ def main():
 
     render_neuralace_advantage()
 
-    # Footer
+    # Footer with sources
     st.divider()
-    st.caption("Competitive Intelligence v1.0 | Data updated regularly from public sources")
+    st.markdown("""
+    **Sources:**
+    [Neuralink Updates](https://neuralink.com/updates/) |
+    [Synchron News](https://synchron.com) |
+    [Paradromics Press](https://paradromics.com/news) |
+    [FDA 510(k) Database](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm)
+    """)
+    st.caption("Competitive Intelligence v2.0 | Last updated: January 2026")
 
 
 if __name__ == "__main__":
