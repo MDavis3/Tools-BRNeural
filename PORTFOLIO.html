@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCI Intelligence Portfolio - Manav Davis</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            background: #fff;
+        }
+        h1 { font-size: 2.2em; color: #0f4c81; margin-bottom: 5px; }
+        h2 { font-size: 1.5em; color: #0f4c81; margin: 30px 0 15px; border-bottom: 2px solid #0f4c81; padding-bottom: 5px; }
+        h3 { font-size: 1.2em; color: #333; margin: 20px 0 10px; }
+        .subtitle { font-size: 1.1em; color: #666; margin-bottom: 30px; }
+        .summary-box {
+            background: linear-gradient(135deg, #0f4c81 0%, #1a6eb0 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .summary-box h2 { color: white; border-bottom: 2px solid rgba(255,255,255,0.3); }
+        .stats { display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap; }
+        .stat { 
+            background: #f8f9fa; 
+            padding: 15px 20px; 
+            border-radius: 8px;
+            border-left: 4px solid #0f4c81;
+            flex: 1;
+            min-width: 150px;
+        }
+        .stat-number { font-size: 1.8em; font-weight: bold; color: #0f4c81; }
+        .stat-label { font-size: 0.85em; color: #666; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e0e0e0; }
+        th { background: #f8f9fa; font-weight: 600; color: #0f4c81; }
+        tr:hover { background: #f8f9fa; }
+        .tool-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+        .tool-card h3 { color: #0f4c81; margin-top: 0; }
+        .tag { 
+            display: inline-block;
+            background: #e3f2fd;
+            color: #0f4c81;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin: 2px;
+        }
+        .highlight { background: #fff3cd; padding: 2px 6px; border-radius: 3px; }
+        .key-finding {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .recommendation {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        code { 
+            background: #f5f5f5; 
+            padding: 2px 6px; 
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9em;
+        }
+        .code-block {
+            background: #1a1a2e;
+            color: #a0e0a0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.85em;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+            color: #666;
+        }
+        @media print {
+            body { padding: 20px; }
+            .summary-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .tool-card, .key-finding, .recommendation { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🧠 BCI Intelligence Portfolio</h1>
+    <p class="subtitle">Manav Davis — Blackrock Neurotech Application</p>
+
+    <div class="summary-box">
+        <h2 style="margin-top:0">Executive Summary</h2>
+        <p>I built two AI-powered intelligence tools to support Blackrock Neurotech's commercialization of <strong>Neuralace</strong> — demonstrating how AI can accelerate market research and business development in the BCI industry.</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-number">~2 hrs</div>
+            <div class="stat-label">Build Time</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">15,000+</div>
+            <div class="stat-label">Lines of Research</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Indexed Chunks</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Working Tools</div>
+        </div>
+    </div>
+
+    <h2>The Problem</h2>
+    <p>Neuralace is unprecedented: a <strong>10,000+ channel</strong>, brain-conforming neural interface targeting vision restoration and mental health treatment. There's no regulatory playbook for this.</p>
+    
+    <p><strong>Questions I set out to answer:</strong></p>
+    <ol style="margin: 15px 0 15px 25px;">
+        <li>What FDA pathway should Neuralace pursue?</li>
+        <li>Who are the competitors and what can we learn from them?</li>
+        <li>How does Blackrock get Medicare to pay for this?</li>
+        <li>Which research labs should Blackrock partner with?</li>
+        <li>What does the literature say about biocompatibility, visual prostheses, and mental health BCIs?</li>
+    </ol>
+
+    <h2>What I Built</h2>
+
+    <div class="tool-card">
+        <h3>🔬 Tool 1: BCI Regulatory Pathway Navigator</h3>
+        <p><strong>Purpose:</strong> Navigate FDA pathways for BCI devices</p>
+        <p style="margin-top:10px"><strong>Deliverables:</strong></p>
+        <ul style="margin: 10px 0 10px 25px;">
+            <li>6 comprehensive research documents (FDA pathways, competitors, reimbursement)</li>
+            <li>4 structured JSON databases</li>
+            <li>Working Python CLI with semantic search</li>
+        </ul>
+        <div class="tags" style="margin-top:10px;">
+            <span class="tag">FDA Pathways</span>
+            <span class="tag">Competitive Intel</span>
+            <span class="tag">Medicare TCET</span>
+            <span class="tag">Predicate Devices</span>
+        </div>
+    </div>
+
+    <div class="tool-card">
+        <h3>📚 Tool 2: BCI Literature Intelligence Agent</h3>
+        <p><strong>Purpose:</strong> Track research papers, labs, and collaboration targets</p>
+        <p style="margin-top:10px"><strong>Deliverables:</strong></p>
+        <ul style="margin: 10px 0 10px 25px;">
+            <li>5 topic-specific research summaries</li>
+            <li>Database of 18+ leading BCI research labs</li>
+            <li>Key researcher profiles for BD outreach</li>
+        </ul>
+        <div class="tags" style="margin-top:10px;">
+            <span class="tag">High-Channel Arrays</span>
+            <span class="tag">Visual Prosthesis</span>
+            <span class="tag">Mental Health BCIs</span>
+            <span class="tag">Biocompatibility</span>
+        </div>
+    </div>
+
+    <h2>Key Research Findings</h2>
+
+    <div class="key-finding">
+        <strong>🎯 Precision Neuroscience achieved 510(k) in 31 days</strong><br>
+        By limiting claims to temporary use and using existing predicates. Blackrock can replicate this for Neuralace hardware.
+    </div>
+
+    <div class="key-finding">
+        <strong>💰 IpsiHand became first BCI with CMS coverage (Jan 2025)</strong><br>
+        Classified as DME, got dedicated CPT code. Sets precedent for BCI reimbursement.
+    </div>
+
+    <div class="key-finding">
+        <strong>⚡ TCET Pathway is a game-changer</strong><br>
+        Expedited Medicare coverage for Breakthrough devices. MoveAgain qualifies. Target: 6 months post-FDA.
+    </div>
+
+    <h3>Competitive Landscape</h3>
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Device</th>
+            <th>Status</th>
+            <th>Channels</th>
+        </tr>
+        <tr>
+            <td><strong>Blackrock</strong></td>
+            <td>Neuralace</td>
+            <td>R&D</td>
+            <td>10,000+</td>
+        </tr>
+        <tr>
+            <td>Precision</td>
+            <td>Layer 7-T</td>
+            <td style="color:#4caf50;font-weight:bold">510(k) CLEARED</td>
+            <td>1,024</td>
+        </tr>
+        <tr>
+            <td>Neuralink</td>
+            <td>N1</td>
+            <td>IDE Trial</td>
+            <td>~1,024</td>
+        </tr>
+        <tr>
+            <td>Paradromics</td>
+            <td>Connexus</td>
+            <td>IDE Approved</td>
+            <td>1,600+</td>
+        </tr>
+        <tr>
+            <td>Synchron</td>
+            <td>Stentrode</td>
+            <td>Pivotal Planning</td>
+            <td>16</td>
+        </tr>
+    </table>
+
+    <h2>Strategic Recommendation</h2>
+
+    <div class="recommendation">
+        <strong>Proposed Neuralace Roadmap:</strong>
+        <table style="margin-top:10px">
+            <tr><td><strong>Q2 2025</strong></td><td>Submit Neuralace research 510(k) (hardware only)</td></tr>
+            <tr><td><strong>Q3 2025</strong></td><td>Submit MoveAgain IDE</td></tr>
+            <tr><td><strong>2026</strong></td><td>Engage CMS TCET pathway</td></tr>
+            <tr><td><strong>2028</strong></td><td>Commercial launch aligned with FDA + Medicare</td></tr>
+        </table>
+    </div>
+
+    <h2>Demo</h2>
+    <div class="code-block">
+# Regulatory Navigator<br>
+$ python cli.py search "Medicare TCET pathway"<br>
+> Found 5 results:<br>
+> 1. TCET provides expedited coverage for Breakthrough Devices...<br>
+> 2. MoveAgain qualifies via Breakthrough Designation (Nov 2021)...<br><br>
+# Literature Agent<br>
+$ python cli.py lab ucsf-starr<br>
+> Starr Lab - Movement Disorders (UCSF)<br>
+> Focus: Closed-loop DBS for depression<br>
+> Neuralace Relevance: HIGH - Mental health BCI pathway
+    </div>
+
+    <h2>Repository</h2>
+    <p><strong>GitHub:</strong> <a href="https://github.com/MDavis3/Tools-BRNeural">https://github.com/MDavis3/Tools-BRNeural</a></p>
+    <p>All research, data, and code available for review.</p>
+
+    <div class="footer">
+        <p><strong>Manav Davis</strong><br>
+        Brown University, Economics '25<br>
+        Seeking: Market Research & Business Development Intern @ Blackrock Neurotech</p>
+        <p style="margin-top:15px;font-size:0.9em;color:#888;">
+            <em>Built with AI assistance in ~2 hours. Demonstrates what's possible when you combine domain expertise with intelligent automation.</em>
+        </p>
+    </div>
+</body>
+</html>
